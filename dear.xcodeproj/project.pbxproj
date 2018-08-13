@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		101752D8211C4827004FE9BA /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101752D7211C4827004FE9BA /* PageViewController.swift */; };
+		101752DA211C4899004FE9BA /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101752D9211C4899004FE9BA /* TutorialViewController.swift */; };
+		1023B8242121D9C000254F7F /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1023B8232121D9C000254F7F /* DesignableTextField.swift */; };
 		A03BC0652110284F00D14FB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BC0642110284F00D14FB7 /* AppDelegate.swift */; };
-		A03BC0672110284F00D14FB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BC0662110284F00D14FB7 /* ViewController.swift */; };
 		A03BC06A2110284F00D14FB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A03BC0682110284F00D14FB7 /* Main.storyboard */; };
 		A03BC06D2110284F00D14FB7 /* dear.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A03BC06B2110284F00D14FB7 /* dear.xcdatamodeld */; };
 		A03BC06F2110285000D14FB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A03BC06E2110285000D14FB7 /* Assets.xcassets */; };
@@ -16,9 +18,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		101752D7211C4827004FE9BA /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		101752D9211C4899004FE9BA /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		1023B8232121D9C000254F7F /* DesignableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
 		A03BC0612110284F00D14FB7 /* dear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A03BC0642110284F00D14FB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A03BC0662110284F00D14FB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A03BC0692110284F00D14FB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A03BC06C2110284F00D14FB7 /* dear.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = dear.xcdatamodel; sourceTree = "<group>"; };
 		A03BC06E2110285000D14FB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,12 +61,14 @@
 			isa = PBXGroup;
 			children = (
 				A03BC0642110284F00D14FB7 /* AppDelegate.swift */,
-				A03BC0662110284F00D14FB7 /* ViewController.swift */,
 				A03BC0682110284F00D14FB7 /* Main.storyboard */,
 				A03BC06E2110285000D14FB7 /* Assets.xcassets */,
 				A03BC0702110285000D14FB7 /* LaunchScreen.storyboard */,
 				A03BC0732110285000D14FB7 /* Info.plist */,
 				A03BC06B2110284F00D14FB7 /* dear.xcdatamodeld */,
+				101752D7211C4827004FE9BA /* PageViewController.swift */,
+				101752D9211C4899004FE9BA /* TutorialViewController.swift */,
+				1023B8232121D9C000254F7F /* DesignableTextField.swift */,
 			);
 			path = dear;
 			sourceTree = "<group>";
@@ -138,9 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A03BC0672110284F00D14FB7 /* ViewController.swift in Sources */,
+				1023B8242121D9C000254F7F /* DesignableTextField.swift in Sources */,
 				A03BC06D2110284F00D14FB7 /* dear.xcdatamodeld in Sources */,
+				101752DA211C4899004FE9BA /* TutorialViewController.swift in Sources */,
 				A03BC0652110284F00D14FB7 /* AppDelegate.swift in Sources */,
+				101752D8211C4827004FE9BA /* PageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
