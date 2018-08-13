@@ -10,6 +10,7 @@
 		101752D8211C4827004FE9BA /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101752D7211C4827004FE9BA /* PageViewController.swift */; };
 		101752DA211C4899004FE9BA /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101752D9211C4899004FE9BA /* TutorialViewController.swift */; };
 		1023B8242121D9C000254F7F /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1023B8232121D9C000254F7F /* DesignableTextField.swift */; };
+		1023B8272121F1B000254F7F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1023B8262121F1B000254F7F /* LoginViewController.swift */; };
 		A03BC0652110284F00D14FB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BC0642110284F00D14FB7 /* AppDelegate.swift */; };
 		A03BC06A2110284F00D14FB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A03BC0682110284F00D14FB7 /* Main.storyboard */; };
 		A03BC06D2110284F00D14FB7 /* dear.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A03BC06B2110284F00D14FB7 /* dear.xcdatamodeld */; };
@@ -21,6 +22,7 @@
 		101752D7211C4827004FE9BA /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		101752D9211C4899004FE9BA /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		1023B8232121D9C000254F7F /* DesignableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
+		1023B8262121F1B000254F7F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A03BC0612110284F00D14FB7 /* dear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A03BC0642110284F00D14FB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A03BC0692110284F00D14FB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -41,6 +43,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1023B8252121F12A00254F7F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				1023B8262121F1B000254F7F /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		1023B8282121F6AE00254F7F /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				101752D7211C4827004FE9BA /* PageViewController.swift */,
+				101752D9211C4899004FE9BA /* TutorialViewController.swift */,
+			);
+			path = Tutorial;
+			sourceTree = "<group>";
+		};
 		A03BC0582110284F00D14FB7 = {
 			isa = PBXGroup;
 			children = (
@@ -60,14 +79,14 @@
 		A03BC0632110284F00D14FB7 /* dear */ = {
 			isa = PBXGroup;
 			children = (
+				1023B8282121F6AE00254F7F /* Tutorial */,
+				1023B8252121F12A00254F7F /* Login */,
 				A03BC0642110284F00D14FB7 /* AppDelegate.swift */,
 				A03BC0682110284F00D14FB7 /* Main.storyboard */,
 				A03BC06E2110285000D14FB7 /* Assets.xcassets */,
 				A03BC0702110285000D14FB7 /* LaunchScreen.storyboard */,
 				A03BC0732110285000D14FB7 /* Info.plist */,
 				A03BC06B2110284F00D14FB7 /* dear.xcdatamodeld */,
-				101752D7211C4827004FE9BA /* PageViewController.swift */,
-				101752D9211C4899004FE9BA /* TutorialViewController.swift */,
 				1023B8232121D9C000254F7F /* DesignableTextField.swift */,
 			);
 			path = dear;
@@ -144,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1023B8272121F1B000254F7F /* LoginViewController.swift in Sources */,
 				1023B8242121D9C000254F7F /* DesignableTextField.swift in Sources */,
 				A03BC06D2110284F00D14FB7 /* dear.xcdatamodeld in Sources */,
 				101752DA211C4899004FE9BA /* TutorialViewController.swift in Sources */,
