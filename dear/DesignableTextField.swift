@@ -2,7 +2,7 @@
 //  DesignableTextField.swift
 //  dear
 //
-//  Created by MinhoCheon on 2018. 8. 14..
+//  Created by SoyeonKim on 2018. 8. 14..
 //  Copyright © 2018년 ksy. All rights reserved.
 //
 
@@ -23,7 +23,6 @@ class DesignableTextField: UITextField, UITextFieldDelegate {
         }
     }
     
-    
     func updateView() {
         if let image = leftImage {
             leftViewMode = .always
@@ -33,7 +32,6 @@ class DesignableTextField: UITextField, UITextFieldDelegate {
             let view = UIView(frame: CGRect(x: 16, y: 14, width: 52, height: 24))
             view.addSubview(imageView)
             
-            
             leftView = view
         }
         
@@ -42,7 +40,6 @@ class DesignableTextField: UITextField, UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         layer.borderWidth = 0
     }
-    
     
     override func becomeFirstResponder() -> Bool {
         layer.masksToBounds = true
