@@ -15,7 +15,7 @@ class WorkThroughViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     
     var pageIndex:[String] = ["01","02","03"]
-    var pageImage:[String] = ["one","two","three"]
+    var pageImage:[String] = ["workthrough_1","workthrough_2","workthrough_3"]
     var pageContent:[String] =
     ["Dear에서 하루 세번, 익명의 누군가에게\n편지를 통해 속마음을 털어놓을 수 있습니다.",
      "과거에 편지와 문자를 받기위해 기다리던\n소중한 시간을 기억하며 진심어린 편지를 나눠보세요.",

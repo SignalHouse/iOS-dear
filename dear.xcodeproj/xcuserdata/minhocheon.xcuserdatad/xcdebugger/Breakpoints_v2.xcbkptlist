@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "dear/DesignableTextField.swift"
-            timestampString = "555923189.8156559"
+            timestampString = "556002968.808107"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "updateView()"
             landmarkType = "7">
          </BreakpointContent>
