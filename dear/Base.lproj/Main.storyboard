@@ -250,6 +250,9 @@
                                 <state key="normal" image="signup">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="SignupPressed:" destination="sCH-D4-I6Q" eventType="touchUpInside" id="cAE-f7-knP"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nickname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4P-Yh-X5J">
                                 <rect key="frame" x="44" y="384" width="50" height="15"/>
@@ -345,6 +348,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="3ZV-2J-9Z0"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="emailText" destination="nqu-pS-9No" id="VpS-3G-OhG"/>
+                        <outlet property="idText" destination="MlX-jF-u2Y" id="xFA-CB-EMS"/>
+                        <outlet property="nicknameText" destination="fKz-qt-FlC" id="6Ix-xA-or8"/>
+                        <outlet property="passwordText" destination="94L-zj-J3v" id="b9o-DX-5d6"/>
+                        <outlet property="rePasswordText" destination="fHc-qg-9B7" id="lMO-Bx-W6e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DGx-MC-9K8" sceneMemberID="firstResponder"/>
             </objects>
