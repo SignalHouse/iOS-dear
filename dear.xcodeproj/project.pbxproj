@@ -18,8 +18,11 @@
 		106CC5E12126CAC400E24274 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CC5E02126CAC400E24274 /* ResetPasswordViewController.swift */; };
 		106CC5E42126CD7B00E24274 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CC5E32126CD7B00E24274 /* HomeViewController.swift */; };
 		106CC5E72126DB9C00E24274 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CC5E62126DB9C00E24274 /* SettingViewController.swift */; };
+		106CC5E92126DEC100E24274 /* ChatMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CC5E82126DEC100E24274 /* ChatMessageModel.swift */; };
+		106CC5EB2126E10900E24274 /* LetterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CC5EA2126E10900E24274 /* LetterModel.swift */; };
+		106CC5ED2126F06F00E24274 /* WalkThrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 106CC5EC2126F06F00E24274 /* WalkThrough.storyboard */; };
+		106CC5EF2126F11300E24274 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 106CC5EE2126F11200E24274 /* Main.storyboard */; };
 		A03BC0652110284F00D14FB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BC0642110284F00D14FB7 /* AppDelegate.swift */; };
-		A03BC06A2110284F00D14FB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A03BC0682110284F00D14FB7 /* Main.storyboard */; };
 		A03BC06D2110284F00D14FB7 /* dear.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A03BC06B2110284F00D14FB7 /* dear.xcdatamodeld */; };
 		A03BC06F2110285000D14FB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A03BC06E2110285000D14FB7 /* Assets.xcassets */; };
 		A03BC0722110285000D14FB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A03BC0702110285000D14FB7 /* LaunchScreen.storyboard */; };
@@ -38,12 +41,15 @@
 		106CC5E02126CAC400E24274 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		106CC5E32126CD7B00E24274 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		106CC5E62126DB9C00E24274 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		106CC5E82126DEC100E24274 /* ChatMessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageModel.swift; sourceTree = "<group>"; };
+		106CC5EA2126E10900E24274 /* LetterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterModel.swift; sourceTree = "<group>"; };
+		106CC5EC2126F06F00E24274 /* WalkThrough.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WalkThrough.storyboard; sourceTree = "<group>"; };
+		106CC5EE2126F11200E24274 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2950D0A962A3B7B29D6D7F66 /* Pods-dear.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dear.release.xcconfig"; path = "Pods/Target Support Files/Pods-dear/Pods-dear.release.xcconfig"; sourceTree = "<group>"; };
 		62114FB3493969FEAEC8DEEC /* Pods-dear.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dear.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dear/Pods-dear.debug.xcconfig"; sourceTree = "<group>"; };
 		A02232F900F36EF8F0BCB63E /* Pods_dear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dear.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A03BC0612110284F00D14FB7 /* dear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A03BC0642110284F00D14FB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A03BC0692110284F00D14FB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A03BC06C2110284F00D14FB7 /* dear.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = dear.xcdatamodel; sourceTree = "<group>"; };
 		A03BC06E2110285000D14FB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A03BC0712110285000D14FB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -78,6 +84,9 @@
 		106CC5E52126CD9300E24274 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				104C72B52125AA1D00D1C4C6 /* MemberModel.swift */,
+				106CC5E82126DEC100E24274 /* ChatMessageModel.swift */,
+				106CC5EA2126E10900E24274 /* LetterModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -111,16 +120,16 @@
 		A03BC0632110284F00D14FB7 /* dear */ = {
 			isa = PBXGroup;
 			children = (
+				A03BC06E2110285000D14FB7 /* Assets.xcassets */,
 				106CC5E52126CD9300E24274 /* Model */,
 				106CC5E22126CACC00E24274 /* ViewController */,
 				A03BC0642110284F00D14FB7 /* AppDelegate.swift */,
-				A03BC0682110284F00D14FB7 /* Main.storyboard */,
-				A03BC06E2110285000D14FB7 /* Assets.xcassets */,
+				106CC5EE2126F11200E24274 /* Main.storyboard */,
+				106CC5EC2126F06F00E24274 /* WalkThrough.storyboard */,
 				A03BC0702110285000D14FB7 /* LaunchScreen.storyboard */,
 				A03BC0732110285000D14FB7 /* Info.plist */,
 				A03BC06B2110284F00D14FB7 /* dear.xcdatamodeld */,
 				1023B8232121D9C000254F7F /* DesignableTextField.swift */,
-				104C72B52125AA1D00D1C4C6 /* MemberModel.swift */,
 				106CC5DC2126B5C200E24274 /* CustomNavigationBar.swift */,
 				106CC5DE2126B63A00E24274 /* CustomNavigationItem.swift */,
 				106CC5DA2126AC7700E24274 /* Prata-Regular.ttf */,
@@ -198,9 +207,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				106CC5DB2126AC7800E24274 /* Prata-Regular.ttf in Resources */,
+				106CC5EF2126F11300E24274 /* Main.storyboard in Resources */,
 				A03BC0722110285000D14FB7 /* LaunchScreen.storyboard in Resources */,
 				A03BC06F2110285000D14FB7 /* Assets.xcassets in Resources */,
-				A03BC06A2110284F00D14FB7 /* Main.storyboard in Resources */,
+				106CC5ED2126F06F00E24274 /* WalkThrough.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,10 +225,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-dear/Pods-dear-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/BWWalkthrough/BWWalkthrough.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BWWalkthrough.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -251,7 +263,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1023B8272121F1B000254F7F /* LoginViewController.swift in Sources */,
+				106CC5EB2126E10900E24274 /* LetterModel.swift in Sources */,
 				106CC5DF2126B63A00E24274 /* CustomNavigationItem.swift in Sources */,
+				106CC5E92126DEC100E24274 /* ChatMessageModel.swift in Sources */,
 				1023B8242121D9C000254F7F /* DesignableTextField.swift in Sources */,
 				101C9DB02122AB9E00DA25CC /* RegisterViewController.swift in Sources */,
 				A03BC06D2110284F00D14FB7 /* dear.xcdatamodeld in Sources */,
@@ -268,14 +282,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A03BC0682110284F00D14FB7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A03BC0692110284F00D14FB7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A03BC0702110285000D14FB7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
