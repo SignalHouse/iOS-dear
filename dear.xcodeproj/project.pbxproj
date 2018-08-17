@@ -11,6 +11,13 @@
 		101C9DB02122AB9E00DA25CC /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101C9DAF2122AB9E00DA25CC /* RegisterViewController.swift */; };
 		1023B8242121D9C000254F7F /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1023B8232121D9C000254F7F /* DesignableTextField.swift */; };
 		1023B8272121F1B000254F7F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1023B8262121F1B000254F7F /* LoginViewController.swift */; };
+		104C72B62125AA1D00D1C4C6 /* MemberModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104C72B52125AA1D00D1C4C6 /* MemberModel.swift */; };
+		106CC5DB2126AC7800E24274 /* Prata-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 106CC5DA2126AC7700E24274 /* Prata-Regular.ttf */; };
+		106CC5DD2126B5C200E24274 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CC5DC2126B5C200E24274 /* CustomNavigationBar.swift */; };
+		106CC5DF2126B63A00E24274 /* CustomNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CC5DE2126B63A00E24274 /* CustomNavigationItem.swift */; };
+		106CC5E12126CAC400E24274 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CC5E02126CAC400E24274 /* ResetPasswordViewController.swift */; };
+		106CC5E42126CD7B00E24274 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CC5E32126CD7B00E24274 /* HomeViewController.swift */; };
+		106CC5E72126DB9C00E24274 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CC5E62126DB9C00E24274 /* SettingViewController.swift */; };
 		A03BC0652110284F00D14FB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BC0642110284F00D14FB7 /* AppDelegate.swift */; };
 		A03BC06A2110284F00D14FB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A03BC0682110284F00D14FB7 /* Main.storyboard */; };
 		A03BC06D2110284F00D14FB7 /* dear.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A03BC06B2110284F00D14FB7 /* dear.xcdatamodeld */; };
@@ -24,6 +31,13 @@
 		101C9DAF2122AB9E00DA25CC /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		1023B8232121D9C000254F7F /* DesignableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
 		1023B8262121F1B000254F7F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		104C72B52125AA1D00D1C4C6 /* MemberModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberModel.swift; sourceTree = "<group>"; };
+		106CC5DA2126AC7700E24274 /* Prata-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Prata-Regular.ttf"; sourceTree = "<group>"; };
+		106CC5DC2126B5C200E24274 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
+		106CC5DE2126B63A00E24274 /* CustomNavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationItem.swift; sourceTree = "<group>"; };
+		106CC5E02126CAC400E24274 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		106CC5E32126CD7B00E24274 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		106CC5E62126DB9C00E24274 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		2950D0A962A3B7B29D6D7F66 /* Pods-dear.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dear.release.xcconfig"; path = "Pods/Target Support Files/Pods-dear/Pods-dear.release.xcconfig"; sourceTree = "<group>"; };
 		62114FB3493969FEAEC8DEEC /* Pods-dear.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dear.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dear/Pods-dear.debug.xcconfig"; sourceTree = "<group>"; };
 		A02232F900F36EF8F0BCB63E /* Pods_dear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dear.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,20 +62,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1023B8252121F12A00254F7F /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				1023B8262121F1B000254F7F /* LoginViewController.swift */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		1023B8282121F6AE00254F7F /* WorkThrough */ = {
+		106CC5E22126CACC00E24274 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				101752D9211C4899004FE9BA /* WorkThroughViewController.swift */,
+				1023B8262121F1B000254F7F /* LoginViewController.swift */,
+				106CC5E02126CAC400E24274 /* ResetPasswordViewController.swift */,
+				101C9DAF2122AB9E00DA25CC /* RegisterViewController.swift */,
+				106CC5E32126CD7B00E24274 /* HomeViewController.swift */,
+				106CC5E62126DB9C00E24274 /* SettingViewController.swift */,
 			);
-			path = WorkThrough;
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		106CC5E52126CD9300E24274 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		50514853BC4986B62F072F8B /* Frameworks */ = {
@@ -93,8 +111,8 @@
 		A03BC0632110284F00D14FB7 /* dear */ = {
 			isa = PBXGroup;
 			children = (
-				1023B8282121F6AE00254F7F /* WorkThrough */,
-				1023B8252121F12A00254F7F /* Login */,
+				106CC5E52126CD9300E24274 /* Model */,
+				106CC5E22126CACC00E24274 /* ViewController */,
 				A03BC0642110284F00D14FB7 /* AppDelegate.swift */,
 				A03BC0682110284F00D14FB7 /* Main.storyboard */,
 				A03BC06E2110285000D14FB7 /* Assets.xcassets */,
@@ -102,7 +120,10 @@
 				A03BC0732110285000D14FB7 /* Info.plist */,
 				A03BC06B2110284F00D14FB7 /* dear.xcdatamodeld */,
 				1023B8232121D9C000254F7F /* DesignableTextField.swift */,
-				101C9DAF2122AB9E00DA25CC /* RegisterViewController.swift */,
+				104C72B52125AA1D00D1C4C6 /* MemberModel.swift */,
+				106CC5DC2126B5C200E24274 /* CustomNavigationBar.swift */,
+				106CC5DE2126B63A00E24274 /* CustomNavigationItem.swift */,
+				106CC5DA2126AC7700E24274 /* Prata-Regular.ttf */,
 			);
 			path = dear;
 			sourceTree = "<group>";
@@ -176,6 +197,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				106CC5DB2126AC7800E24274 /* Prata-Regular.ttf in Resources */,
 				A03BC0722110285000D14FB7 /* LaunchScreen.storyboard in Resources */,
 				A03BC06F2110285000D14FB7 /* Assets.xcassets in Resources */,
 				A03BC06A2110284F00D14FB7 /* Main.storyboard in Resources */,
@@ -229,11 +251,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				1023B8272121F1B000254F7F /* LoginViewController.swift in Sources */,
+				106CC5DF2126B63A00E24274 /* CustomNavigationItem.swift in Sources */,
 				1023B8242121D9C000254F7F /* DesignableTextField.swift in Sources */,
 				101C9DB02122AB9E00DA25CC /* RegisterViewController.swift in Sources */,
 				A03BC06D2110284F00D14FB7 /* dear.xcdatamodeld in Sources */,
+				106CC5DD2126B5C200E24274 /* CustomNavigationBar.swift in Sources */,
 				101752DA211C4899004FE9BA /* WorkThroughViewController.swift in Sources */,
+				106CC5E42126CD7B00E24274 /* HomeViewController.swift in Sources */,
+				106CC5E12126CAC400E24274 /* ResetPasswordViewController.swift in Sources */,
 				A03BC0652110284F00D14FB7 /* AppDelegate.swift in Sources */,
+				104C72B62125AA1D00D1C4C6 /* MemberModel.swift in Sources */,
+				106CC5E72126DB9C00E24274 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
