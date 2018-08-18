@@ -25,6 +25,8 @@
 		10FCA03321281E3A002A78B3 /* LetterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FCA03221281E39002A78B3 /* LetterCollectionViewCell.swift */; };
 		10FCA0352128222E002A78B3 /* WaitingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FCA0342128222E002A78B3 /* WaitingCollectionViewCell.swift */; };
 		10FCA03721282B95002A78B3 /* WritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FCA03621282B95002A78B3 /* WritingViewController.swift */; };
+		10FCA03A212834A7002A78B3 /* ChatOtherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FCA039212834A7002A78B3 /* ChatOtherTableViewCell.swift */; };
+		10FCA03C212834B4002A78B3 /* ChatMeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FCA03B212834B4002A78B3 /* ChatMeTableViewCell.swift */; };
 		A03BC0652110284F00D14FB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BC0642110284F00D14FB7 /* AppDelegate.swift */; };
 		A03BC06D2110284F00D14FB7 /* dear.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A03BC06B2110284F00D14FB7 /* dear.xcdatamodeld */; };
 		A03BC06F2110285000D14FB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A03BC06E2110285000D14FB7 /* Assets.xcassets */; };
@@ -51,6 +53,8 @@
 		10FCA03221281E39002A78B3 /* LetterCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterCollectionViewCell.swift; sourceTree = "<group>"; };
 		10FCA0342128222E002A78B3 /* WaitingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingCollectionViewCell.swift; sourceTree = "<group>"; };
 		10FCA03621282B95002A78B3 /* WritingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingViewController.swift; sourceTree = "<group>"; };
+		10FCA039212834A7002A78B3 /* ChatOtherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatOtherTableViewCell.swift; sourceTree = "<group>"; };
+		10FCA03B212834B4002A78B3 /* ChatMeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMeTableViewCell.swift; sourceTree = "<group>"; };
 		2950D0A962A3B7B29D6D7F66 /* Pods-dear.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dear.release.xcconfig"; path = "Pods/Target Support Files/Pods-dear/Pods-dear.release.xcconfig"; sourceTree = "<group>"; };
 		62114FB3493969FEAEC8DEEC /* Pods-dear.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dear.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dear/Pods-dear.debug.xcconfig"; sourceTree = "<group>"; };
 		A02232F900F36EF8F0BCB63E /* Pods_dear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dear.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +102,20 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		10FCA0382128347C002A78B3 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				10FCA03221281E39002A78B3 /* LetterCollectionViewCell.swift */,
+				1023B8232121D9C000254F7F /* DesignableTextField.swift */,
+				106CC5DC2126B5C200E24274 /* CustomNavigationBar.swift */,
+				106CC5DE2126B63A00E24274 /* CustomNavigationItem.swift */,
+				10FCA0342128222E002A78B3 /* WaitingCollectionViewCell.swift */,
+				10FCA039212834A7002A78B3 /* ChatOtherTableViewCell.swift */,
+				10FCA03B212834B4002A78B3 /* ChatMeTableViewCell.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
 		50514853BC4986B62F072F8B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,8 +145,8 @@
 		A03BC0632110284F00D14FB7 /* dear */ = {
 			isa = PBXGroup;
 			children = (
-				10FCA03221281E39002A78B3 /* LetterCollectionViewCell.swift */,
 				A03BC06E2110285000D14FB7 /* Assets.xcassets */,
+				10FCA0382128347C002A78B3 /* Custom */,
 				106CC5E52126CD9300E24274 /* Model */,
 				106CC5E22126CACC00E24274 /* ViewController */,
 				A03BC0642110284F00D14FB7 /* AppDelegate.swift */,
@@ -137,11 +155,7 @@
 				A03BC0702110285000D14FB7 /* LaunchScreen.storyboard */,
 				A03BC0732110285000D14FB7 /* Info.plist */,
 				A03BC06B2110284F00D14FB7 /* dear.xcdatamodeld */,
-				1023B8232121D9C000254F7F /* DesignableTextField.swift */,
-				106CC5DC2126B5C200E24274 /* CustomNavigationBar.swift */,
-				106CC5DE2126B63A00E24274 /* CustomNavigationItem.swift */,
 				106CC5DA2126AC7700E24274 /* Prata-Regular.ttf */,
-				10FCA0342128222E002A78B3 /* WaitingCollectionViewCell.swift */,
 			);
 			path = dear;
 			sourceTree = "<group>";
@@ -281,6 +295,8 @@
 				101C9DB02122AB9E00DA25CC /* RegisterViewController.swift in Sources */,
 				A03BC06D2110284F00D14FB7 /* dear.xcdatamodeld in Sources */,
 				106CC5DD2126B5C200E24274 /* CustomNavigationBar.swift in Sources */,
+				10FCA03A212834A7002A78B3 /* ChatOtherTableViewCell.swift in Sources */,
+				10FCA03C212834B4002A78B3 /* ChatMeTableViewCell.swift in Sources */,
 				101752DA211C4899004FE9BA /* WorkThroughViewController.swift in Sources */,
 				106CC5E42126CD7B00E24274 /* HomeViewController.swift in Sources */,
 				106CC5E12126CAC400E24274 /* ResetPasswordViewController.swift in Sources */,
