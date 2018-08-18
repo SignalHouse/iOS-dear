@@ -26,11 +26,17 @@ struct LetterInfo: Codable {
 
 class LetterModel {
     // Single ton
-    static let ChatMessageSingleTon = LetterModel()
-    var arrayList: Array<LetterModel>
+    static let LetterModelSingleTon = LetterModel()
+    var arrayList: Array<LetterInfo>
     
     private init() {
         self.arrayList = []
+        
+        self.arrayList.append(LetterInfo(senderNickname: "익명의 코끼리", content: "오늘 맛있는거 먹었다!", id: 0, date: "18.01.01", isSelected: false))
+        self.arrayList.append(LetterInfo(senderNickname: "익명의 하이에나", content: "오늘 맛있는거 먹었다!", id: 1, date: "18.01.01", isSelected: false))
+        self.arrayList.append(LetterInfo(senderNickname: "익명의 코끼리", content: "오늘 맛있는거 먹었다!", id: 2, date: "18.01.01", isSelected: false))
+        self.arrayList.append(LetterInfo(senderNickname: "익명의 코끼리", content: "오늘 맛있는거 먹었다!", id: 3, date: "18.01.01", isSelected: false))
+
     }
     
 }

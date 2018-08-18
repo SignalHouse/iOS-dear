@@ -22,6 +22,8 @@
 		106CC5EB2126E10900E24274 /* LetterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CC5EA2126E10900E24274 /* LetterModel.swift */; };
 		106CC5ED2126F06F00E24274 /* WalkThrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 106CC5EC2126F06F00E24274 /* WalkThrough.storyboard */; };
 		106CC5EF2126F11300E24274 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 106CC5EE2126F11200E24274 /* Main.storyboard */; };
+		10FCA03321281E3A002A78B3 /* LetterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FCA03221281E39002A78B3 /* LetterCollectionViewCell.swift */; };
+		10FCA0352128222E002A78B3 /* WaitingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FCA0342128222E002A78B3 /* WaitingCollectionViewCell.swift */; };
 		A03BC0652110284F00D14FB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BC0642110284F00D14FB7 /* AppDelegate.swift */; };
 		A03BC06D2110284F00D14FB7 /* dear.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A03BC06B2110284F00D14FB7 /* dear.xcdatamodeld */; };
 		A03BC06F2110285000D14FB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A03BC06E2110285000D14FB7 /* Assets.xcassets */; };
@@ -45,6 +47,8 @@
 		106CC5EA2126E10900E24274 /* LetterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterModel.swift; sourceTree = "<group>"; };
 		106CC5EC2126F06F00E24274 /* WalkThrough.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WalkThrough.storyboard; sourceTree = "<group>"; };
 		106CC5EE2126F11200E24274 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		10FCA03221281E39002A78B3 /* LetterCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterCollectionViewCell.swift; sourceTree = "<group>"; };
+		10FCA0342128222E002A78B3 /* WaitingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingCollectionViewCell.swift; sourceTree = "<group>"; };
 		2950D0A962A3B7B29D6D7F66 /* Pods-dear.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dear.release.xcconfig"; path = "Pods/Target Support Files/Pods-dear/Pods-dear.release.xcconfig"; sourceTree = "<group>"; };
 		62114FB3493969FEAEC8DEEC /* Pods-dear.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dear.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dear/Pods-dear.debug.xcconfig"; sourceTree = "<group>"; };
 		A02232F900F36EF8F0BCB63E /* Pods_dear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dear.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +124,7 @@
 		A03BC0632110284F00D14FB7 /* dear */ = {
 			isa = PBXGroup;
 			children = (
+				10FCA03221281E39002A78B3 /* LetterCollectionViewCell.swift */,
 				A03BC06E2110285000D14FB7 /* Assets.xcassets */,
 				106CC5E52126CD9300E24274 /* Model */,
 				106CC5E22126CACC00E24274 /* ViewController */,
@@ -133,6 +138,7 @@
 				106CC5DC2126B5C200E24274 /* CustomNavigationBar.swift */,
 				106CC5DE2126B63A00E24274 /* CustomNavigationItem.swift */,
 				106CC5DA2126AC7700E24274 /* Prata-Regular.ttf */,
+				10FCA0342128222E002A78B3 /* WaitingCollectionViewCell.swift */,
 			);
 			path = dear;
 			sourceTree = "<group>";
@@ -266,7 +272,9 @@
 				106CC5EB2126E10900E24274 /* LetterModel.swift in Sources */,
 				106CC5DF2126B63A00E24274 /* CustomNavigationItem.swift in Sources */,
 				106CC5E92126DEC100E24274 /* ChatMessageModel.swift in Sources */,
+				10FCA0352128222E002A78B3 /* WaitingCollectionViewCell.swift in Sources */,
 				1023B8242121D9C000254F7F /* DesignableTextField.swift in Sources */,
+				10FCA03321281E3A002A78B3 /* LetterCollectionViewCell.swift in Sources */,
 				101C9DB02122AB9E00DA25CC /* RegisterViewController.swift in Sources */,
 				A03BC06D2110284F00D14FB7 /* dear.xcdatamodeld in Sources */,
 				106CC5DD2126B5C200E24274 /* CustomNavigationBar.swift in Sources */,

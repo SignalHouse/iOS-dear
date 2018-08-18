@@ -8,11 +8,14 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
-
+class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+        var modelLetter = LetterModel.LetterModelSingleTon
+    
+    @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let logoImage = UIImage.init(named: "smallLogo")
         let logoImageView = UIImageView.init(image: logoImage)
         logoImageView.frame = CGRect(x:0.0,y:0.0, width:52,height:21)
@@ -25,4 +28,23 @@ class HomeViewController: UIViewController {
         navigationItem.leftBarButtonItem =  imageItem
     }
     
+        func numberOfSections(in collectionView: UICollectionView) -> Int {
+            return 1
+        }
+    
+        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+            return self.modelLetter.arrayList.count
+        }
+    
+        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    
+            let cell : LetterCollectionViewCell! = collectionView.dequeueReusableCell(withReuseIdentifier: "LetterCell", for: indexPath) as! LetterCollectionViewCell
+    
+            let info = self.modelLetter.arrayList[indexPath.row]
+            cell.title.text = info.senderNickname
+            cell.content.text = info.content
+            return cell
+        }
 }
+
+
