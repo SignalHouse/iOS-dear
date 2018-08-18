@@ -10,4 +10,7 @@ import UIKit
 
 class WaitingCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var time: UILabel!
+    @IBOutlet weak var content: UILabel!
+    
 }
