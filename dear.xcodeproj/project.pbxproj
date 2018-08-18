@@ -27,6 +27,7 @@
 		10FCA03721282B95002A78B3 /* WritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FCA03621282B95002A78B3 /* WritingViewController.swift */; };
 		10FCA03A212834A7002A78B3 /* ChatOtherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FCA039212834A7002A78B3 /* ChatOtherTableViewCell.swift */; };
 		10FCA03C212834B4002A78B3 /* ChatMeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FCA03B212834B4002A78B3 /* ChatMeTableViewCell.swift */; };
+		10FCA03E21283737002A78B3 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FCA03D21283737002A78B3 /* ChatViewController.swift */; };
 		A03BC0652110284F00D14FB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BC0642110284F00D14FB7 /* AppDelegate.swift */; };
 		A03BC06D2110284F00D14FB7 /* dear.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A03BC06B2110284F00D14FB7 /* dear.xcdatamodeld */; };
 		A03BC06F2110285000D14FB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A03BC06E2110285000D14FB7 /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		10FCA03621282B95002A78B3 /* WritingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingViewController.swift; sourceTree = "<group>"; };
 		10FCA039212834A7002A78B3 /* ChatOtherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatOtherTableViewCell.swift; sourceTree = "<group>"; };
 		10FCA03B212834B4002A78B3 /* ChatMeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMeTableViewCell.swift; sourceTree = "<group>"; };
+		10FCA03D21283737002A78B3 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		2950D0A962A3B7B29D6D7F66 /* Pods-dear.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dear.release.xcconfig"; path = "Pods/Target Support Files/Pods-dear/Pods-dear.release.xcconfig"; sourceTree = "<group>"; };
 		62114FB3493969FEAEC8DEEC /* Pods-dear.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dear.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dear/Pods-dear.debug.xcconfig"; sourceTree = "<group>"; };
 		A02232F900F36EF8F0BCB63E /* Pods_dear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dear.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +90,7 @@
 				106CC5E32126CD7B00E24274 /* HomeViewController.swift */,
 				106CC5E62126DB9C00E24274 /* SettingViewController.swift */,
 				10FCA03621282B95002A78B3 /* WritingViewController.swift */,
+				10FCA03D21283737002A78B3 /* ChatViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				A03BC0652110284F00D14FB7 /* AppDelegate.swift in Sources */,
 				104C72B62125AA1D00D1C4C6 /* MemberModel.swift in Sources */,
 				10FCA03721282B95002A78B3 /* WritingViewController.swift in Sources */,
+				10FCA03E21283737002A78B3 /* ChatViewController.swift in Sources */,
 				106CC5E72126DB9C00E24274 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

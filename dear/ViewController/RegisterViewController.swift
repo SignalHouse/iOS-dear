@@ -63,5 +63,7 @@ class RegisterViewController: UIViewController {
                     print(error)
                 }
         }
+        
+        navigationController?.popViewController(animated: true)
     }
 }
