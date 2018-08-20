@@ -6,6 +6,7 @@ target 'dear' do
   use_frameworks!
 pod 'Alamofire', '~> 4.7'
 pod "BWWalkthrough"
+pod 'Socket.IO-Client-Swift', '~> 13.3.0'
   # Pods for dear
 
 end

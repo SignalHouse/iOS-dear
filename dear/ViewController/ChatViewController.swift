@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SocketIO
 
 class ChatViewController: UIViewController{
     var modelChat = ChatMessageModel.ChatMessageSingleTon
