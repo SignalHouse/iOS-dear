@@ -67,12 +67,22 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             
             let headerView:HomeHeaderCollectionReusableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "HeadView", for: indexPath) as! HomeHeaderCollectionReusableView
             
+            // 편지지 개수
             headerView.countLetterLabel.text = "\(self.modelLetter.arrayList.count)"
+            
+            // 편집 가능하도록
+            headerView.editLetterButton.addTarget(self, action: #selector(HomeViewController.editButtonPressed(_:)), for: UIControlEvents.touchUpInside)
+            
             return headerView
             
         default:
             fatalError("Unexpected element kind")
         }
+    }
+    
+    // 편집 버튼 눌렀을 때 액션 추가
+    @objc func editButtonPressed(_ btn :UIButton) {
+        print("편집")
     }
     
     // setting Letter
