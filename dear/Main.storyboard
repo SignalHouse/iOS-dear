@@ -500,6 +500,7 @@
                                         <connections>
                                             <outlet property="content" destination="NS5-rj-4IM" id="zep-18-vW7"/>
                                             <outlet property="title" destination="Arv-Ha-clB" id="VNj-h5-Xtc"/>
+                                            <segue destination="3iW-cU-hlc" kind="custom" id="vRv-g5-Kh9"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -906,7 +907,57 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oBd-GU-KLP" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1438" y="1489"/>
+            <point key="canvasLocation" x="2206" y="1433"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="v8c-yn-wws">
+            <objects>
+                <viewController id="Hae-ko-Pps" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q6Y-Co-gYd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Np-Cv-HhQ">
+                                <rect key="frame" x="166" y="259" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="j4r-gE-0Em"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gh4-46-2uV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2206" y="2167"/>
+        </scene>
+        <!--Drawer Controller-->
+        <scene sceneID="3Ev-rQ-H78">
+            <objects>
+                <viewController id="3iW-cU-hlc" customClass="KYDrawerController" customModule="KYDrawerController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z7s-N5-gUS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="2Vq-la-hC4"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="mainSegueIdentifier" value="main"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="drawerSegueIdentifier" value="drawer"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="drawerWidth">
+                            <real key="value" value="100"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="Hae-ko-Pps" kind="custom" identifier="drawer" customClass="KYEmbedDrawerControllerSegue" customModule="KYDrawerController" id="dM1-xX-P68"/>
+                        <segue destination="73y-hd-JHh" kind="custom" identifier="main" customClass="KYEmbedMainControllerSegue" customModule="KYDrawerController" id="Eqj-ci-lps"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A5u-Lo-9j8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1438" y="1487"/>
         </scene>
         <!--Waiting Letter Table View Controller-->
         <scene sceneID="T6O-qy-l9d">
@@ -1429,7 +1480,6 @@
                                         <connections>
                                             <outlet property="content" destination="egK-6V-Ysj" id="I95-Um-4Vb"/>
                                             <outlet property="title" destination="htm-cD-KQG" id="wmd-0z-EUY"/>
-                                            <segue destination="73y-hd-JHh" kind="show" id="JVy-DS-SKk"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
