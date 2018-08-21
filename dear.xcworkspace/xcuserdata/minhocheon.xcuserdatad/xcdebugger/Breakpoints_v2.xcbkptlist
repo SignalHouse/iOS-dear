@@ -19,5 +19,144 @@
             landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dear/ViewController/SettingViewController.swift"
+            timestampString = "556522940.3336819"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dear/ViewController/SettingTableViewController.swift"
+            timestampString = "556526016.927031"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "SettingTableViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "dear.SettingTableViewController.__deallocating_deinit"
+                  moduleName = "dear"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minhocheon/Documents/GitHub/iOS_dear/dear/ViewController/SettingTableViewController.swift"
+                  timestampString = "556522769.322659"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "dear.SettingTableViewController.__allocating_init(style: __C.UITableViewStyle) -&gt; dear.SettingTableViewController"
+                  moduleName = "dear"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minhocheon/Documents/GitHub/iOS_dear/dear/ViewController/SettingTableViewController.swift"
+                  timestampString = "556522769.3292201"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "dear.SettingTableViewController.init(style: __C.UITableViewStyle) -&gt; dear.SettingTableViewController"
+                  moduleName = "dear"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minhocheon/Documents/GitHub/iOS_dear/dear/ViewController/SettingTableViewController.swift"
+                  timestampString = "556522769.3316621"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "39">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "dear.SettingTableViewController.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; dear.SettingTableViewController"
+                  moduleName = "dear"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minhocheon/Documents/GitHub/iOS_dear/dear/ViewController/SettingTableViewController.swift"
+                  timestampString = "556522769.333688"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "dear.SettingTableViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; dear.SettingTableViewController"
+                  moduleName = "dear"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minhocheon/Documents/GitHub/iOS_dear/dear/ViewController/SettingTableViewController.swift"
+                  timestampString = "556522769.336078"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "85">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "dear.SettingTableViewController.__allocating_init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;dear.SettingTableViewController&gt;"
+                  moduleName = "dear"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minhocheon/Documents/GitHub/iOS_dear/dear/ViewController/SettingTableViewController.swift"
+                  timestampString = "556522769.33839"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "dear.SettingTableViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;dear.SettingTableViewController&gt;"
+                  moduleName = "dear"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minhocheon/Documents/GitHub/iOS_dear/dear/ViewController/SettingTableViewController.swift"
+                  timestampString = "556522769.340785"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "55">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

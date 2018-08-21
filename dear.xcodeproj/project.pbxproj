@@ -11,13 +11,14 @@
 		101C9DB02122AB9E00DA25CC /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101C9DAF2122AB9E00DA25CC /* RegisterViewController.swift */; };
 		1023B8242121D9C000254F7F /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1023B8232121D9C000254F7F /* DesignableTextField.swift */; };
 		1023B8272121F1B000254F7F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1023B8262121F1B000254F7F /* LoginViewController.swift */; };
+		1026F5CF212BD54200137D2B /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1026F5CE212BD54200137D2B /* SettingTableViewController.swift */; };
+		1026F5D5212BE4DE00137D2B /* UpdatePasswordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1026F5D4212BE4DE00137D2B /* UpdatePasswordTableViewController.swift */; };
 		104C72B62125AA1D00D1C4C6 /* MemberModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104C72B52125AA1D00D1C4C6 /* MemberModel.swift */; };
 		106CC5DB2126AC7800E24274 /* Prata-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 106CC5DA2126AC7700E24274 /* Prata-Regular.ttf */; };
 		106CC5DD2126B5C200E24274 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CC5DC2126B5C200E24274 /* CustomNavigationBar.swift */; };
 		106CC5DF2126B63A00E24274 /* CustomNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CC5DE2126B63A00E24274 /* CustomNavigationItem.swift */; };
 		106CC5E12126CAC400E24274 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CC5E02126CAC400E24274 /* ResetPasswordViewController.swift */; };
 		106CC5E42126CD7B00E24274 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CC5E32126CD7B00E24274 /* HomeViewController.swift */; };
-		106CC5E72126DB9C00E24274 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CC5E62126DB9C00E24274 /* SettingViewController.swift */; };
 		106CC5E92126DEC100E24274 /* ChatMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CC5E82126DEC100E24274 /* ChatMessageModel.swift */; };
 		106CC5EB2126E10900E24274 /* LetterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CC5EA2126E10900E24274 /* LetterModel.swift */; };
 		106CC5ED2126F06F00E24274 /* WalkThrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 106CC5EC2126F06F00E24274 /* WalkThrough.storyboard */; };
@@ -40,13 +41,14 @@
 		101C9DAF2122AB9E00DA25CC /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		1023B8232121D9C000254F7F /* DesignableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
 		1023B8262121F1B000254F7F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1026F5CE212BD54200137D2B /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		1026F5D4212BE4DE00137D2B /* UpdatePasswordTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordTableViewController.swift; sourceTree = "<group>"; };
 		104C72B52125AA1D00D1C4C6 /* MemberModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberModel.swift; sourceTree = "<group>"; };
 		106CC5DA2126AC7700E24274 /* Prata-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Prata-Regular.ttf"; sourceTree = "<group>"; };
 		106CC5DC2126B5C200E24274 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		106CC5DE2126B63A00E24274 /* CustomNavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationItem.swift; sourceTree = "<group>"; };
 		106CC5E02126CAC400E24274 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		106CC5E32126CD7B00E24274 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		106CC5E62126DB9C00E24274 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		106CC5E82126DEC100E24274 /* ChatMessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageModel.swift; sourceTree = "<group>"; };
 		106CC5EA2126E10900E24274 /* LetterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterModel.swift; sourceTree = "<group>"; };
 		106CC5EC2126F06F00E24274 /* WalkThrough.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WalkThrough.storyboard; sourceTree = "<group>"; };
@@ -88,9 +90,10 @@
 				106CC5E02126CAC400E24274 /* ResetPasswordViewController.swift */,
 				101C9DAF2122AB9E00DA25CC /* RegisterViewController.swift */,
 				106CC5E32126CD7B00E24274 /* HomeViewController.swift */,
-				106CC5E62126DB9C00E24274 /* SettingViewController.swift */,
 				10FCA03621282B95002A78B3 /* WritingViewController.swift */,
 				10FCA03D21283737002A78B3 /* ChatViewController.swift */,
+				1026F5CE212BD54200137D2B /* SettingTableViewController.swift */,
+				1026F5D4212BE4DE00137D2B /* UpdatePasswordTableViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1026F5CF212BD54200137D2B /* SettingTableViewController.swift in Sources */,
 				1023B8272121F1B000254F7F /* LoginViewController.swift in Sources */,
 				106CC5EB2126E10900E24274 /* LetterModel.swift in Sources */,
 				106CC5DF2126B63A00E24274 /* CustomNavigationItem.swift in Sources */,
@@ -301,6 +305,7 @@
 				10FCA03321281E3A002A78B3 /* LetterCollectionViewCell.swift in Sources */,
 				101C9DB02122AB9E00DA25CC /* RegisterViewController.swift in Sources */,
 				A03BC06D2110284F00D14FB7 /* dear.xcdatamodeld in Sources */,
+				1026F5D5212BE4DE00137D2B /* UpdatePasswordTableViewController.swift in Sources */,
 				106CC5DD2126B5C200E24274 /* CustomNavigationBar.swift in Sources */,
 				10FCA03A212834A7002A78B3 /* ChatOtherTableViewCell.swift in Sources */,
 				10FCA03C212834B4002A78B3 /* ChatMeTableViewCell.swift in Sources */,
@@ -311,7 +316,6 @@
 				104C72B62125AA1D00D1C4C6 /* MemberModel.swift in Sources */,
 				10FCA03721282B95002A78B3 /* WritingViewController.swift in Sources */,
 				10FCA03E21283737002A78B3 /* ChatViewController.swift in Sources */,
-				106CC5E72126DB9C00E24274 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
