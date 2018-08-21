@@ -2,7 +2,7 @@
 //  LetterModel.swift
 //  dear
 //
-//  Created by MinhoCheon on 2018. 8. 17..
+//  Created by SoyeonKim on 2018. 8. 17..
 //  Copyright © 2018년 ksy. All rights reserved.
 //
 

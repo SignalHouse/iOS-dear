@@ -2,7 +2,7 @@
 //  SettingTableViewController.swift
 //  dear
 //
-//  Created by MinhoCheon on 2018. 8. 21..
+//  Created by SoyeonKim on 2018. 8. 21..
 //  Copyright © 2018년 ksy. All rights reserved.
 //
 
