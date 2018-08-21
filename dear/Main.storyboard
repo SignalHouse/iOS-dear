@@ -767,24 +767,26 @@
             </objects>
             <point key="canvasLocation" x="717.60000000000002" y="1487.4062968515743"/>
         </scene>
-        <!--대상n의 닉네임-->
+        <!--익명의 하이에나-->
         <scene sceneID="ZGa-C7-cCy">
             <objects>
-                <viewController id="73y-hd-JHh" customClass="ChatViewController" customModule="dear" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="익명의 하이에나" id="73y-hd-JHh" customClass="ChatViewController" customModule="dear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GOn-Dt-pZk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gap-jZ-SV4">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gap-jZ-SV4">
                                 <rect key="frame" x="0.0" y="64" width="375" height="563"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.88235294119999996" green="0.91372549020000005" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexColor" red="0.20000000000000001" green="0.33333333329999998" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.88235294119999996" green="0.91372549020000005" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="118" id="TCm-ag-Al1" customClass="ChatOtherTableViewCell" customModule="dear" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="OtherCell" rowHeight="118" id="TCm-ag-Al1" customClass="ChatOtherTableViewCell" customModule="dear" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="118"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TCm-ag-Al1" id="y4k-Bc-SU4">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="117.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="118"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CJh-45-yKz">
@@ -824,11 +826,11 @@
                                             <outlet property="senderNickname" destination="9PY-C4-43O" id="2JR-pD-7En"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="118" id="Dqa-SJ-KZ1" customClass="ChatMeTableViewCell" customModule="dear" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MeCell" rowHeight="118" id="Dqa-SJ-KZ1" customClass="ChatMeTableViewCell" customModule="dear" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="146" width="375" height="118"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dqa-SJ-KZ1" id="E2q-Gc-jXr">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="117.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="118"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IS4-V6-yHK">
@@ -869,6 +871,7 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <sections/>
                                 <connections>
                                     <outlet property="dataSource" destination="73y-hd-JHh" id="CzD-Gd-Q8B"/>
                                     <outlet property="delegate" destination="73y-hd-JHh" id="FQu-YO-YK5"/>
@@ -893,8 +896,13 @@
                         <viewLayoutGuide key="safeArea" id="T4Y-f3-Kjz"/>
                     </view>
                     <navigationItem key="navigationItem" title="대상n의 닉네임" id="hBz-As-HeM">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="oxQ-ah-aPu"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="group3" id="oxQ-ah-aPu"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="sendButton" destination="h6c-SN-S94" id="O9q-hi-Zvw"/>
+                        <outlet property="sendMessageText" destination="5SG-au-kHv" id="zoF-7X-J1E"/>
+                        <outlet property="tableView" destination="gap-jZ-SV4" id="BDO-Hc-yHg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oBd-GU-KLP" sceneMemberID="firstResponder"/>
             </objects>
@@ -1748,6 +1756,7 @@
     </scenes>
     <resources>
         <image name="email_icon" width="18" height="14"/>
+        <image name="group3" width="28" height="28"/>
         <image name="group_16_copy" width="20" height="20"/>
         <image name="group_5" width="44" height="44"/>
         <image name="group_7" width="339" height="62"/>
