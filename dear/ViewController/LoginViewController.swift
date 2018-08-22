@@ -17,12 +17,9 @@ class LoginViewController: UIViewController, BWWalkthroughViewControllerDelegate
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
         let userDefaults = UserDefaults.standard
         if !userDefaults.bool(forKey: "walkthroughPresented") {
-            
             showWalkthrough()
-            
             userDefaults.set(true, forKey: "walkthroughPresented")
             userDefaults.synchronize()
         }
@@ -30,9 +27,10 @@ class LoginViewController: UIViewController, BWWalkthroughViewControllerDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        UINavigationBar.appearance().shadowImage = UIImage()
-//        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     func showWalkthrough() {
