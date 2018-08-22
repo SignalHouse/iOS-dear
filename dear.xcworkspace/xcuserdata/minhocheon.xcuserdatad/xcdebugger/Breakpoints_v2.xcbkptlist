@@ -181,7 +181,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "dear/ViewController/ChatViewController.swift"
-            timestampString = "556616103.6333359"
+            timestampString = "556622969.082335"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "37"
@@ -197,7 +197,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "dear/ViewController/ChatSidemenuTableViewController.swift"
-            timestampString = "556616103.633404"
+            timestampString = "556622969.0824389"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "18"
@@ -213,13 +213,29 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "dear/ViewController/ChatSidemenuTableViewController.swift"
-            timestampString = "556616103.6334521"
+            timestampString = "556622969.082563"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "22"
             endingLineNumber = "22"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dear/ViewController/AlertViewController.swift"
+            timestampString = "556622969.082817"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "7"
+            endingLineNumber = "7"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

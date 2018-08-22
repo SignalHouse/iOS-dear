@@ -18,6 +18,7 @@
 		1026F5DB212C033200137D2B /* WaitingLetterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1026F5DA212C033200137D2B /* WaitingLetterTableViewController.swift */; };
 		104C72B62125AA1D00D1C4C6 /* MemberModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104C72B52125AA1D00D1C4C6 /* MemberModel.swift */; };
 		106CBB2A212D3B4B00679975 /* ChatSidemenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CBB29212D3B4B00679975 /* ChatSidemenuTableViewController.swift */; };
+		106CBB30212D5DFF00679975 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CBB2F212D5DFF00679975 /* AlertViewController.swift */; };
 		106CC5DB2126AC7800E24274 /* Prata-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 106CC5DA2126AC7700E24274 /* Prata-Regular.ttf */; };
 		106CC5DD2126B5C200E24274 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CC5DC2126B5C200E24274 /* CustomNavigationBar.swift */; };
 		106CC5DF2126B63A00E24274 /* CustomNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CC5DE2126B63A00E24274 /* CustomNavigationItem.swift */; };
@@ -52,6 +53,7 @@
 		1026F5DA212C033200137D2B /* WaitingLetterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingLetterTableViewController.swift; sourceTree = "<group>"; };
 		104C72B52125AA1D00D1C4C6 /* MemberModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberModel.swift; sourceTree = "<group>"; };
 		106CBB29212D3B4B00679975 /* ChatSidemenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSidemenuTableViewController.swift; sourceTree = "<group>"; };
+		106CBB2F212D5DFF00679975 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		106CC5DA2126AC7700E24274 /* Prata-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Prata-Regular.ttf"; sourceTree = "<group>"; };
 		106CC5DC2126B5C200E24274 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		106CC5DE2126B63A00E24274 /* CustomNavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationItem.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				1026F5D6212BF3DB00137D2B /* HomeTestCollectionViewController.swift */,
 				1026F5DA212C033200137D2B /* WaitingLetterTableViewController.swift */,
 				106CBB29212D3B4B00679975 /* ChatSidemenuTableViewController.swift */,
+				106CBB2F212D5DFF00679975 /* AlertViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				1023B8242121D9C000254F7F /* DesignableTextField.swift in Sources */,
 				10FCA03321281E3A002A78B3 /* LetterCollectionViewCell.swift in Sources */,
 				101C9DB02122AB9E00DA25CC /* RegisterViewController.swift in Sources */,
+				106CBB30212D5DFF00679975 /* AlertViewController.swift in Sources */,
 				A03BC06D2110284F00D14FB7 /* dear.xcdatamodeld in Sources */,
 				1026F5D5212BE4DE00137D2B /* UpdatePasswordTableViewController.swift in Sources */,
 				106CC5DD2126B5C200E24274 /* CustomNavigationBar.swift in Sources */,

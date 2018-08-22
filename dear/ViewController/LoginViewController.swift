@@ -33,6 +33,20 @@ class LoginViewController: UIViewController, BWWalkthroughViewControllerDelegate
         self.navigationController?.navigationBar.isHidden = true
     }
     
+    func showAlert() {
+        let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let myAlert = storyboard.instantiateViewController(withIdentifier: "aaaa") 
+        myAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+        myAlert.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        self.present(myAlert, animated: true, completion: nil)
+    }
+    
+    func showMain() {
+        let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let mainview = storyboard.instantiateViewController(withIdentifier: "mainview")
+        self.present(mainview, animated: true, completion: nil)
+    }
+    
     func showWalkthrough() {
         let stb: UIStoryboard = UIStoryboard(name: "WalkThrough", bundle: nil)
         let walkthrough = stb.instantiateViewController(withIdentifier: "Master") as! BWWalkthroughViewController
@@ -48,4 +62,15 @@ class LoginViewController: UIViewController, BWWalkthroughViewControllerDelegate
         
         self.present(walkthrough, animated: true, completion: nil)
     }
+    
+    @IBAction func signinPressed(_ sender: UIButton) {
+        if (emailText.text==""||passwordText.text=="") {
+            showAlert()
+        }
+        else {
+            showMain()
+        }
+    }
+    
+    
 }
