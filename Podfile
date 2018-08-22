@@ -8,6 +8,7 @@ pod 'Alamofire', '~> 4.7'
 pod "BWWalkthrough"
 pod 'Socket.IO-Client-Swift', '~> 13.3.0'
 pod 'KYDrawerController'
+pod 'SideMenu'
   # Pods for dear
 
 end

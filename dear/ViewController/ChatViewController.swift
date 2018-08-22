@@ -8,7 +8,7 @@
 
 import UIKit
 import SocketIO
-import KYDrawerController
+import SideMenu
 
 class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     @IBOutlet weak var tableView: UITableView!
@@ -29,6 +29,16 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         titleLabel.textColor = UIColor(red: 51/255, green: 85/255, blue: 106/255, alpha: 1)
         titleLabel.font = UIFont(name: "Prata-Regular", size: 18)
         self.navigationItem.titleView = titleLabel
+        
+        // side menu setting
+         let menuRightNavigationController = storyboard!.instantiateViewController(withIdentifier: "ChatSidemenuTableViewController") as! UISideMenuNavigationController
+        SideMenuManager.default.menuRightNavigationController = menuRightNavigationController
+        SideMenuManager.default.menuAddPanGestureToPresent(toView: self.navigationController!.navigationBar)
+        SideMenuManager.default.menuAddScreenEdgePanGesturesToPresent(toView: self.navigationController!.view)
+        
+        // side menu custom
+        SideMenuManager.default.menuPresentMode = .menuSlideIn
+        SideMenuManager.default.menuShadowRadius = 100
     }
     
     
