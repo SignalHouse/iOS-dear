@@ -77,61 +77,63 @@ class LoginViewController: UIViewController, BWWalkthroughViewControllerDelegate
     @IBAction func signinPressed(_ sender: UIButton) {
         statusLabel.text = ""
         
-        // 값을 입력하지 않은 경우
-        if (emailText.text=="") {
-            statusLabel.text = "이메일을 입력해주세요"
-            return
-        }
+        showMain()
         
-        else if (passwordText.text=="") {
-            statusLabel.text = "비밀번호를 입력해주세요"
-            return
-        }
-            
-        // 메일 형식이 맞지 않은 경우
-        else if (!isValidEmail(emailString: emailText.text!)) {
-            statusLabel.text = "메일 형식이 올바르지 않습니다."
-            return
-        }
-
-        // 형식은 만족하나 회원 정보가 없는 경우
-        else {
-            // for server
-            let email = emailText.text!
-            let password = passwordText.text!
-            
-            let parameters: [String: String] = [
-                "email" : email,
-                "password" : password
-            ]
-            
-            // token 저장
-            Alamofire.request("http://192.168.1.162:8000/api/user", method: .post, parameters: parameters, encoding: JSONEncoding.default)
-                .responseJSON
-                { response in
-                    switch response.result {
-                    case.success(let value):
-                        print("Success with JSON: \(value)")
-                        let response = value as! NSDictionary
-                        // 작업 수행
-                        
-                    case .failure(let error):
-                        print(error)
-                        self.showAlert()
-                    }
-            }
-            
-            // for local
-            let myMemberInfo = modelMember.findUser(email: emailText.text!)
-            if myMemberInfo?.password != passwordText.text {
-                showAlert()
-            }
-            else {
-                //myInfo에 사용자 저장
-                myInfo.mylogInfo = myMemberInfo!
-                showMain()
-            }
-        }
+//        // 값을 입력하지 않은 경우
+//        if (emailText.text=="") {
+//            statusLabel.text = "이메일을 입력해주세요"
+//            return
+//        }
+//        
+//        else if (passwordText.text=="") {
+//            statusLabel.text = "비밀번호를 입력해주세요"
+//            return
+//        }
+//            
+//        // 메일 형식이 맞지 않은 경우
+//        else if (!isValidEmail(emailString: emailText.text!)) {
+//            statusLabel.text = "메일 형식이 올바르지 않습니다."
+//            return
+//        }
+//
+//        // 형식은 만족하나 회원 정보가 없는 경우
+//        else {
+//            // for server
+//            let email = emailText.text!
+//            let password = passwordText.text!
+//            
+//            let parameters: [String: String] = [
+//                "email" : email,
+//                "password" : password
+//            ]
+//            
+//            // token 저장
+//            Alamofire.request("http://192.168.1.162:8000/api/user", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+//                .responseJSON
+//                { response in
+//                    switch response.result {
+//                    case.success(let value):
+//                        print("Success with JSON: \(value)")
+//                        let response = value as! NSDictionary
+//                        // 작업 수행
+//                        
+//                    case .failure(let error):
+//                        print(error)
+//                        self.showAlert()
+//                    }
+//            }
+//            
+//            // for local
+//            let myMemberInfo = modelMember.findUser(email: emailText.text!)
+//            if myMemberInfo?.password != passwordText.text {
+//                showAlert()
+//            }
+//            else {
+//                //myInfo에 사용자 저장
+//                myInfo.mylogInfo = myMemberInfo!
+//                showMain()
+//            }
+//        }
     }
     
     

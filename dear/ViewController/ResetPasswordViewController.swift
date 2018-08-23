@@ -11,6 +11,8 @@ import Alamofire
 
 class ResetPasswordViewController: UIViewController {
 
+    @IBOutlet weak var emailText: DesignableTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,13 +30,38 @@ class ResetPasswordViewController: UIViewController {
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
     }
-    
-    @IBAction func sendPressed(_ sender: UIButton) {
+    func showAlert() {
         let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let myAlert:AlertViewController = storyboard.instantiateViewController(withIdentifier: "alert") as! AlertViewController
         myAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
         myAlert.modalTransitionStyle = .coverVertical
         myAlert.labelText = "이메일을 전송했습니다."
         self.present(myAlert, animated: false, completion: nil)
+    }
+    
+    @IBAction func sendPressed(_ sender: UIButton) {
+        // for server
+        let email = emailText.text!
+        
+        let parameters: [String: String] = [
+            "email" : email
+        ]
+        
+        
+        Alamofire.request("http://192.168.1.162:8000/api/user", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+            .responseJSON
+            { response in
+                switch response.result {
+                case.success(let value):
+                    print("Success with JSON: \(value)")
+                    let response = value as! NSDictionary
+                    // 작업 수행
+                    
+                    self.showAlert()
+                    
+                case .failure(let error):
+                    print(error)
+                }
+        }
     }
 }

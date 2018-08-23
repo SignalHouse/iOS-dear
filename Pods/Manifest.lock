@@ -6,6 +6,7 @@ PODS:
   - Socket.IO-Client-Swift (13.3.0):
     - Starscream (~> 3.0.2)
   - Starscream (3.0.5)
+  - SwiftyTimer (2.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
@@ -13,6 +14,7 @@ DEPENDENCIES:
   - KYDrawerController
   - SideMenu
   - Socket.IO-Client-Swift (~> 13.3.0)
+  - SwiftyTimer
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -22,6 +24,7 @@ SPEC REPOS:
     - SideMenu
     - Socket.IO-Client-Swift
     - Starscream
+    - SwiftyTimer
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
@@ -30,7 +33,8 @@ SPEC CHECKSUMS:
   SideMenu: 70ee5657df63ec3382660ec4ef470bf1cf5db07d
   Socket.IO-Client-Swift: 0afb192a562db90d50e3f7f7421c06925a3f0179
   Starscream: faf918b2f2eff7d5dd21180646bf015a669673bd
+  SwiftyTimer: 2efd74b060d69ad4f1496baf5bbedbe132125fcf
 
-PODFILE CHECKSUM: b31bfd841333bcba9ae7be798c8f9acbcde5f3ab
+PODFILE CHECKSUM: da1c6ffe9df155a4c087867c27065319468761b0
 
 COCOAPODS: 1.5.3

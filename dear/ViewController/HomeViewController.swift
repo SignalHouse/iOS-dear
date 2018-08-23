@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SwiftyTimer
 
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -15,6 +16,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var remainCountLabel: UILabel!
+    var timeArr:Array<String> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,22 +32,46 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         heightConstraint.isActive = true
         widthConstraint.isActive = true
         navigationItem.leftBarButtonItem =  imageItem
-        
-        getTimeInterval()
     }
     
-    // 시간 계산 (전역으로 돌리기)
-    func getTimeInterval() {
-        var date1 = Date()
-        var date2 = Date(timeIntervalSinceNow: 9 * 60 * 60)
+    override func viewDidAppear(_ animated: Bool) {
+        collectionView.reloadData()
+    }
+
+    
+    func calculateTimeDifference() -> Array<String> {
+        var arr:Array<String> = []
         
-        let formatdate = DateFormatter()
-        formatdate.dateFormat = "yyyy/MM/dd HH:mm:ss"
-        formatdate.locale = Locale(identifier: "ko_KR")
+        // 현재 날짜, 포매터 설정
+        var currentDate = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HHmm"
+        formatter.locale = Locale(identifier: "ko_KR")
         
-        var diffsec = date2.timeIntervalSince(date1)
-        print(diffsec)
-        print(formatdate.string(from: date1))
+        var startString = formatter.string(from: currentDate)
+        
+        if startString.count < 4 {
+            for _ in 0..<(4 - startString.count) {
+                startString = "0" + startString
+            }
+        }
+        
+        // 매일 10시
+        var endString = "\(2200)"
+        if endString.count < 4 {
+            for _ in 0..<(4 - endString.count) {
+                endString = "0" + endString
+            }
+        }
+        
+        let startDate = formatter.date(from: startString)!
+        let endDate = formatter.date(from: endString)!
+        let difference = endDate.timeIntervalSince(startDate)
+        
+        arr.append(String(Int(difference) / 3600))
+        arr.append(String(Int(difference) % 3600 / 60))
+        
+        return arr
     }
     
     /* collectionview setting */
@@ -73,8 +99,15 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             // 편지지 개수
             headerView.countLetterLabel.text = "\(self.modelLetter.arrayList.count)"
             
+            // 남은 시간
+            timeArr = calculateTimeDifference()
+            headerView.hourIntervalLabel.text = timeArr[0]
+            headerView.minuetIntervalLabel.text = timeArr[1]
+            
             // 편집 가능하도록
             headerView.editLetterButton.addTarget(self, action: #selector(HomeViewController.editButtonPressed(_:)), for: UIControlEvents.touchUpInside)
+            
+            headerView.reloadInputViews()
             
             return headerView
             

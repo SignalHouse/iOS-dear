@@ -33,7 +33,7 @@ class SettingTableViewController: UITableViewController {
         
         // nickname init
         myNicknameText.isEnabled = false
-        
+        myNicknameText.text = myInfo.mylogInfo?.nickname
     }
     
     @IBAction func switchPressed(_ sender: UISwitch) {
@@ -70,5 +70,6 @@ class SettingTableViewController: UITableViewController {
     }
 
     @IBAction func logoutPressed(_ sender: UIButton) {
+        myInfo == nil
     }
 }
