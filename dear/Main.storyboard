@@ -327,7 +327,7 @@
                                 <rect key="frame" x="0.0" y="134" width="375" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xOt-jp-cPM">
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xOt-jp-cPM">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="106"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.88235294119999996" green="0.91372549020000005" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -452,10 +452,10 @@
             </objects>
             <point key="canvasLocation" x="2206" y="1487"/>
         </scene>
-        <!--익명의 하이에나-->
+        <!--대상n의 닉네임-->
         <scene sceneID="ZGa-C7-cCy">
             <objects>
-                <viewController title="익명의 하이에나" id="73y-hd-JHh" customClass="ChatViewController" customModule="dear" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="73y-hd-JHh" customClass="ChatViewController" customModule="dear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GOn-Dt-pZk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -492,8 +492,8 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="내용" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tuO-jk-4de">
-                                                            <rect key="frame" x="16" y="55" width="26" height="18"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="내용" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tuO-jk-4de">
+                                                            <rect key="frame" x="16" y="55" width="293" height="18"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <color key="textColor" red="0.52156862745098043" green="0.52156862745098043" blue="0.54117647058823526" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -536,8 +536,8 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="내용" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tc1-MS-F0v">
-                                                            <rect key="frame" x="305" y="55" width="26" height="18"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="내용" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tc1-MS-F0v">
+                                                            <rect key="frame" x="8" y="55" width="323" height="18"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <color key="textColor" red="0.52156862749999999" green="0.52156862749999999" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -598,7 +598,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oBd-GU-KLP" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1409" y="1487"/>
+            <point key="canvasLocation" x="1408.8" y="1485.6071964017992"/>
         </scene>
         <!--Waiting Letter Table View Controller-->
         <scene sceneID="T6O-qy-l9d">
@@ -1210,7 +1210,7 @@
                                         <connections>
                                             <outlet property="content" destination="egK-6V-Ysj" id="I95-Um-4Vb"/>
                                             <outlet property="title" destination="htm-cD-KQG" id="wmd-0z-EUY"/>
-                                            <segue destination="73y-hd-JHh" kind="show" id="dDr-lN-Ofz"/>
+                                            <segue destination="73y-hd-JHh" kind="show" identifier="toChatView" id="dDr-lN-Ofz"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

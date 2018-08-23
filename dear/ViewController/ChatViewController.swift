@@ -17,6 +17,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var sendButton: UIButton!
     
     var modelChat = ChatMessageModel.ChatMessageSingleTon
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -61,25 +62,36 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
                     let response = value as! NSDictionary
                     //
                     //
+                    self.sendMessageText.text = ""
                     
                 case .failure(let error):
                     print(error)
                 }
         }
+        
+        // for local
+//        self.modelChat.arrayList.append(ChatMessageInfo(nickname: (myInfo.mylogInfo?.nickname)!, content: sendMessageText.text!, date: "00.00", alignment: 0))
+        
     }
+    
     /* tableview setting */
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return modelChat.arrayList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let meCell = tableView.dequeueReusableCell(withIdentifier: "MeCell") as! ChatMeTableViewCell
         let otherCell = tableView.dequeueReusableCell(withIdentifier: "OtherCell") as! ChatOtherTableViewCell
+        
+        // cell detail setting
+        meCell.myNickname.text = myInfo.mylogInfo?.nickname
+        
+        otherCell.senderNickname.text = modelChat.arrayList[indexPath.row].nickname
+        otherCell.sendContent.text = modelChat.arrayList[indexPath.row].content
         
         if(indexPath.row % 2 != 0) { return meCell}
         else { return otherCell}

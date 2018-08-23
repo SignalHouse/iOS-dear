@@ -132,6 +132,17 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             return cell
     }
     
+    // 채팅방 타이틀 정하기 위함.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toChatView"
+        {
+            let dest = segue.destination as! ChatViewController
+            let cell = sender as! UICollectionViewCell
+            let indexPath: IndexPath! =  self.collectionView.indexPath(for: cell)
+            dest.title =  modelLetter.arrayList[indexPath.row].senderNickname
+        }
+    }
+    
 }
 
 
