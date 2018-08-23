@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		101752DA211C4899004FE9BA /* WorkThroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101752D9211C4899004FE9BA /* WorkThroughViewController.swift */; };
 		101C9DB02122AB9E00DA25CC /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101C9DAF2122AB9E00DA25CC /* RegisterViewController.swift */; };
+		101F18B5212EF16B0004BE98 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101F18B4212EF16B0004BE98 /* Login.storyboard */; };
 		1023B8242121D9C000254F7F /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1023B8232121D9C000254F7F /* DesignableTextField.swift */; };
 		1023B8272121F1B000254F7F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1023B8262121F1B000254F7F /* LoginViewController.swift */; };
 		1026F5CF212BD54200137D2B /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1026F5CE212BD54200137D2B /* SettingTableViewController.swift */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		101752D9211C4899004FE9BA /* WorkThroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkThroughViewController.swift; sourceTree = "<group>"; };
 		101C9DAF2122AB9E00DA25CC /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		101F18B4212EF16B0004BE98 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		1023B8232121D9C000254F7F /* DesignableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
 		1023B8262121F1B000254F7F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1026F5CE212BD54200137D2B /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				106CC5E22126CACC00E24274 /* ViewController */,
 				A03BC0642110284F00D14FB7 /* AppDelegate.swift */,
 				106CC5EE2126F11200E24274 /* Main.storyboard */,
+				101F18B4212EF16B0004BE98 /* Login.storyboard */,
 				106CC5EC2126F06F00E24274 /* WalkThrough.storyboard */,
 				A03BC0702110285000D14FB7 /* LaunchScreen.storyboard */,
 				A03BC0732110285000D14FB7 /* Info.plist */,
@@ -252,6 +255,7 @@
 			files = (
 				106CC5DB2126AC7800E24274 /* Prata-Regular.ttf in Resources */,
 				106CC5EF2126F11300E24274 /* Main.storyboard in Resources */,
+				101F18B5212EF16B0004BE98 /* Login.storyboard in Resources */,
 				A03BC0722110285000D14FB7 /* LaunchScreen.storyboard in Resources */,
 				A03BC06F2110285000D14FB7 /* Assets.xcassets in Resources */,
 				106CC5ED2126F06F00E24274 /* WalkThrough.storyboard in Resources */,

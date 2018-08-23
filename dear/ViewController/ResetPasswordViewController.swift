@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ResetPasswordViewController: UIViewController {
 
@@ -26,5 +27,14 @@ class ResetPasswordViewController: UIViewController {
         
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+    }
+    
+    @IBAction func sendPressed(_ sender: UIButton) {
+        let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let myAlert:AlertViewController = storyboard.instantiateViewController(withIdentifier: "alert") as! AlertViewController
+        myAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+        myAlert.modalTransitionStyle = .coverVertical
+        myAlert.labelText = "이메일을 전송했습니다."
+        self.present(myAlert, animated: false, completion: nil)
     }
 }

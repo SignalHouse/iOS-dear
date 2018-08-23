@@ -15,6 +15,7 @@ class LoginViewController: UIViewController, BWWalkthroughViewControllerDelegate
     @IBOutlet weak var passwordText: DesignableTextField!
     var isFirst:Bool = false
     
+    // 처음 어플 실행시만 워크쓰로우 페이지 노출
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         let userDefaults = UserDefaults.standard
@@ -35,10 +36,11 @@ class LoginViewController: UIViewController, BWWalkthroughViewControllerDelegate
     
     func showAlert() {
         let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let myAlert = storyboard.instantiateViewController(withIdentifier: "aaaa") 
+        let myAlert:AlertViewController = storyboard.instantiateViewController(withIdentifier: "alert") as! AlertViewController
         myAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
-        myAlert.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
-        self.present(myAlert, animated: true, completion: nil)
+        myAlert.modalTransitionStyle = .coverVertical
+        myAlert.labelText = "이메일, 비밀번호를 확인해주세요!"
+        self.present(myAlert, animated: false, completion: nil)
     }
     
     func showMain() {
@@ -54,7 +56,6 @@ class LoginViewController: UIViewController, BWWalkthroughViewControllerDelegate
         let page_two = stb.instantiateViewController(withIdentifier:"Walk02")
         let page_three = stb.instantiateViewController(withIdentifier:"Walk03")
         
-        // Attach the pages to the master
         walkthrough.delegate = self
         walkthrough.add(viewController:page_one)
         walkthrough.add(viewController:page_two)
@@ -63,6 +64,7 @@ class LoginViewController: UIViewController, BWWalkthroughViewControllerDelegate
         self.present(walkthrough, animated: true, completion: nil)
     }
     
+    // 로그인 버튼 클릭
     @IBAction func signinPressed(_ sender: UIButton) {
         if (emailText.text==""||passwordText.text=="") {
             showAlert()

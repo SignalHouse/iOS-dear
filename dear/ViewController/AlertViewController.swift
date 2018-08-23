@@ -10,16 +10,18 @@ import UIKit
 
 class AlertViewController: UIViewController {
     
+    @IBOutlet weak var contentLabel: UILabel!
+    var labelText:String? = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+        // 이전 화면에서 값을 넘겨받은 경우에 해당 내용으로 변경
+        if let text = labelText {
+            contentLabel.text = text
+        }
     }
     
     @IBAction func okPressed(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: false, completion: nil)
     }
 }

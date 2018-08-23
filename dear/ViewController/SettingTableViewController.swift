@@ -64,4 +64,6 @@ class SettingTableViewController: UITableViewController {
         return 4
     }
 
+    @IBAction func logoutPressed(_ sender: UIButton) {
+    }
 }
