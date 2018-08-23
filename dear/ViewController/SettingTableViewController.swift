@@ -12,6 +12,7 @@ class SettingTableViewController: UITableViewController {
     @IBOutlet weak var switchStatusLabel: UILabel!
     @IBOutlet weak var myNicknameText: UITextField!
     @IBOutlet weak var submitButton: UIBarButtonItem!
+    @IBOutlet weak var myNicknameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +28,12 @@ class SettingTableViewController: UITableViewController {
         titleLabel.font = UIFont(name: "Prata-Regular", size: 18)
         self.navigationItem.titleView = titleLabel
         
+        // login info init
+        myNicknameLabel.text = myInfo.mylogInfo?.email
+        
         // nickname init
         myNicknameText.isEnabled = false
+        
     }
     
     @IBAction func switchPressed(_ sender: UISwitch) {

@@ -65,7 +65,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="23" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="63G-KD-ak9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="63G-KD-ak9">
                                 <rect key="frame" x="196" y="171" width="39" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Prata-Regular" family="Prata" pointSize="28"/>
@@ -176,7 +176,7 @@
                                 <rect key="frame" x="142" y="276" width="91" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="발송예정편지 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBL-ml-s2k">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="발송예정편지 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBL-ml-s2k">
                                         <rect key="frame" x="8" y="8" width="83" height="19"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
@@ -193,7 +193,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kif-UF-lk6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kif-UF-lk6">
                                 <rect key="frame" x="53" y="395" width="10" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Prata-Regular" family="Prata" pointSize="16"/>
@@ -208,6 +208,13 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 남음" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsj-je-T7q">
+                                <rect key="frame" x="291" y="607" width="27" height="12"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="10"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="rt3-ID-Bre"/>
@@ -220,6 +227,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="MwR-kf-nvq" id="4rJ-Sb-hHy"/>
+                        <outlet property="remainCountLabel" destination="lsj-je-T7q" id="zUh-gt-ybV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PDY-Tm-xSK" sceneMemberID="firstResponder"/>
@@ -420,7 +428,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NJM-A6-TDV" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="717.60000000000002" y="1487.4062968515743"/>
+            <point key="canvasLocation" x="718" y="1486"/>
         </scene>
         <!--Side Menu Navigation Controller-->
         <scene sceneID="Tl3-KH-Dfm">
@@ -567,6 +575,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.33333333329999998" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="group_5"/>
+                                <connections>
+                                    <action selector="sendButtonPressed:" destination="73y-hd-JHh" eventType="touchUpInside" id="ZvE-Db-mcv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.88235294119999996" green="0.91372549020000005" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -869,7 +880,7 @@
         <!--Write-->
         <scene sceneID="wQB-e0-f4U">
             <objects>
-                <viewController title="Write" id="3h7-9b-sMB" customClass="WritingViewController" customModule="dear" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Write" id="3h7-9b-sMB" customClass="WriteViewController" customModule="dear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5J9-E6-VaI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -962,8 +973,16 @@
                         <viewLayoutGuide key="safeArea" id="EBI-K6-tf3"/>
                     </view>
                     <navigationItem key="navigationItem" id="bfQ-KG-xUz">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="group_5" id="5ei-5L-7XZ"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="group_5" id="5ei-5L-7XZ">
+                            <connections>
+                                <action selector="sendButtonPressed:" destination="3h7-9b-sMB" id="Ww2-o9-3LM"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="letterContentText" destination="iFO-7b-HKN" id="RAw-x2-eNh"/>
+                        <outlet property="letterTitleText" destination="ufs-kV-gNH" id="e30-8x-jLi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5cx-g8-e6g" sceneMemberID="firstResponder"/>
             </objects>
@@ -1125,6 +1144,7 @@
                         <barButtonItem key="rightBarButtonItem" title="완료" id="e6p-tD-snl"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="myNicknameLabel" destination="pJo-db-GC8" id="huQ-pd-pxJ"/>
                         <outlet property="myNicknameText" destination="QJ2-vW-UhF" id="eF7-Mo-rY1"/>
                         <outlet property="submitButton" destination="e6p-tD-snl" id="XL6-pX-NtX"/>
                         <outlet property="switchStatusLabel" destination="cLi-qI-pdq" id="yNZ-BI-14Q"/>
@@ -1223,7 +1243,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="23" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJ1-9j-anQ">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJ1-9j-anQ">
                                             <rect key="frame" x="194" y="98" width="39" height="42"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="Prata-Regular" family="Prata" pointSize="28"/>
@@ -1251,8 +1271,8 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6K-u6-J8O">
-                                            <rect key="frame" x="56" y="310" width="10" height="22"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6K-u6-J8O">
+                                            <rect key="frame" x="56" y="310" width="12" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="Prata-Regular" family="Prata" pointSize="16"/>
                                             <nil key="textColor"/>
@@ -1270,7 +1290,7 @@
                                             <rect key="frame" x="142" y="189" width="91" height="32"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="발송예정편지 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxF-7E-pke">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="발송예정편지 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxF-7E-pke">
                                                     <rect key="frame" x="8" y="8" width="83" height="19"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
@@ -1303,6 +1323,13 @@
                                     <segue destination="bRc-aQ-uPN" kind="show" id="FFf-0O-WwW"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 남음" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wP-EO-mcd">
+                                <rect key="frame" x="283" y="607" width="43" height="12"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="10"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="5QY-Lf-N9Q"/>
@@ -1318,6 +1345,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="IDA-ap-AAy" id="0m1-hp-J0E"/>
+                        <outlet property="remainCountLabel" destination="1wP-EO-mcd" id="FZg-Qm-F2d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dRU-Jg-qHG" sceneMemberID="firstResponder"/>
@@ -1327,6 +1355,7 @@
         <!--Navigation Controller-->
         <scene sceneID="KSC-eb-aeo">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2fy-bB-GqK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="NX6-y4-NIG" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Fr3-Ea-OKE">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -1347,7 +1376,6 @@
                         <segue destination="gGG-ij-6eQ" kind="relationship" relationship="rootViewController" id="Yah-2z-6LH"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2fy-bB-GqK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-802" y="33"/>
         </scene>
@@ -1396,8 +1424,8 @@
                                     <segue destination="nHF-3L-N6M" kind="show" id="lC0-YR-iZq"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="login status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czG-G8-qG5">
-                                <rect key="frame" x="32" y="405" width="66" height="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czG-G8-qG5">
+                                <rect key="frame" x="32" y="405" width="237" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.94901960780000005" green="0.2156862745" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1453,6 +1481,7 @@
                     <connections>
                         <outlet property="emailText" destination="w8n-f4-cHO" id="rOa-86-z6i"/>
                         <outlet property="passwordText" destination="9EB-bx-ECu" id="Zas-Mp-Ilu"/>
+                        <outlet property="statusLabel" destination="czG-G8-qG5" id="GSQ-bo-G0U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Pn-pY-YJ4" sceneMemberID="firstResponder"/>

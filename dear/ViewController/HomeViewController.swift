@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import Alamofire
 
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     var modelLetter = LetterModel.LetterModelSingleTon
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var remainCountLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

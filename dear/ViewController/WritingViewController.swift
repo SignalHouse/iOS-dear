@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class WritingViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     

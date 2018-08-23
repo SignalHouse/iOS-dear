@@ -8,6 +8,7 @@
 
 import UIKit
 import SocketIO
+import Alamofire
 import SideMenu
 
 class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
@@ -42,6 +43,30 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     
+    @IBAction func sendButtonPressed(_ sender: Any) {
+        // for server
+        let content = sendMessageText.text!
+        
+        let parameters: [String: String] = [
+            "content" : content
+        ]
+        
+        // 편지 전송 후 작업 수행
+        Alamofire.request("http://192.168.1.162:8000/api/user", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+            .responseJSON
+            { response in
+                switch response.result {
+                case.success(let value):
+                    print("Success with JSON: \(value)")
+                    let response = value as! NSDictionary
+                    //
+                    //
+                    
+                case .failure(let error):
+                    print(error)
+                }
+        }
+    }
     /* tableview setting */
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2

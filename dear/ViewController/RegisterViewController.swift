@@ -17,6 +17,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var rePasswordText: DesignableTextField!
     @IBOutlet weak var nicknameText: UITextField!
     
+    var modelMember = MemberModel.MemberSingleTon
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
@@ -37,6 +38,7 @@ class RegisterViewController: UIViewController {
 
     // 회원가입 테스트
     @IBAction func SignupPressed(_ sender: Any) {
+        // for server
         let email = emailText.text!
         let id = idText.text!
         let password = passwordText.text!
@@ -49,7 +51,7 @@ class RegisterViewController: UIViewController {
             "password" : password
         ]
         
-        // pasing 후 token에 저장
+        // parsing 후 token에 저장
         Alamofire.request("http://192.168.1.162:8000/api/user", method: .post, parameters: parameters, encoding: JSONEncoding.default)
             .responseJSON
             { response in
@@ -65,6 +67,10 @@ class RegisterViewController: UIViewController {
                 }
         }
         
+        // for local
+        modelMember.arrayList.append(MemberInfo(email: email, nickname: nickname, password: password))
+        
+        // popView
         navigationController?.popViewController(animated: true)
     }
 }
