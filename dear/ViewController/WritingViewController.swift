@@ -12,7 +12,8 @@ import Alamofire
 class WritingViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     var modelWaiting = WaitingLetterModel.WaitingLetterModelSingleTon
-
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,6 +26,10 @@ class WritingViewController: UIViewController, UICollectionViewDelegate, UIColle
         titleLabel.textColor = UIColor(red: 51/255, green: 85/255, blue: 106/255, alpha: 1)
         titleLabel.font = UIFont(name: "Prata-Regular", size: 18)
         self.navigationItem.titleView = titleLabel
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        collectionView.reloadData()
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {

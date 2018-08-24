@@ -36,6 +36,9 @@ class SettingTableViewController: UITableViewController {
         if let nick = myInfo.mylogInfo?.nickname {
             myNicknameText.text = nick
         }
+        
+        // for empty cell no line
+        tableView.tableFooterView = UIView()
     }
     
     @IBAction func switchPressed(_ sender: UISwitch) {

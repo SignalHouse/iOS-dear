@@ -431,6 +431,9 @@
                     <navigationItem key="navigationItem" id="63j-fa-dHh">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="group5" id="0xI-4X-Z0g"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="xOt-jp-cPM" id="3Zr-gH-Vro"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NJM-A6-TDV" sceneMemberID="firstResponder"/>
             </objects>
