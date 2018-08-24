@@ -23,14 +23,32 @@ class ChatSidemenuTableViewController: UITableViewController {
         return 3
     }
     
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-////        let reportCell = tableView.dequeueReusableCell(withIdentifier: "reportCell")
-////        let blockCell = tableView.dequeueReusableCell(withIdentifier: "blockCell")
-////        let outCell = tableView.dequeueReusableCell(withIdentifier: "outCell")
-////
-//        return cell
-//        
-//    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // 신고하기
+        if indexPath.row == 0 {
+            goReport()
+        }
+        // 차단하기
+        if indexPath.row == 1 {
+            goBlock()
+        }
+        // 퇴장하기
+        if indexPath.row == 2 {
+            goOut()
+        }
+    }
+    
+    func goReport() {
+        print("신고")
+    }
+    
+    func goBlock() {
+        print("차단")
+    }
+    
+    func goOut() {
+        print("퇴장")
+    }
     
     
 }
