@@ -33,7 +33,28 @@ class RegisterViewController: UIViewController {
         titleLabel.textColor = UIColor(red: 51/255, green: 85/255, blue: 106/255, alpha: 1)
         titleLabel.font = UIFont(name: "Prata-Regular", size: 18)
         self.navigationItem.titleView = titleLabel
+        
+        // nickname init
+        nicknameText.text = nicknameGenerator()
 
+    }
+    
+    func nicknameGenerator() -> String {
+        var resultNickname = ""
+        
+        var colorNames: Array = ["자주색", "다홍색", "분홍색", "주황색", "라임색", "노락색", "연노랑색",
+            "초록색", "연두색", "청록색", "파란색", "하늘색", "남색", "보라색", "연보라색"]
+        var animalNames: Array = ["호랑이", "앵무새", "물고기", "고양이", "강아지", "재규어", "팬더"
+            , "사자", "표범", "곰", "미어캣", "북극곰", "햄스터", "개구리", "사슴"]
+        
+        let randomIndexColor = Int(arc4random_uniform(UInt32(colorNames.count)))
+        let randomIndexAnimal = Int(arc4random_uniform(UInt32(animalNames.count)))
+        
+        var colorName = colorNames[randomIndexColor]
+        var animalName = animalNames[randomIndexAnimal]
+        resultNickname = colorName + " " + animalName
+        
+        return resultNickname
     }
 
     // 회원가입 테스트
