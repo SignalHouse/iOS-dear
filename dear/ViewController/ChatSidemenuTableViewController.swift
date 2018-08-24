@@ -13,6 +13,9 @@ class ChatSidemenuTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // for empty cell no line
+        tableView.tableFooterView = UIView()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

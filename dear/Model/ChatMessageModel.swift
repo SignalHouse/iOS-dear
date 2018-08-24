@@ -32,11 +32,10 @@ class ChatMessageModel {
         self.arrayList = []
         
         // dummy data
-        self.arrayList.append(ChatMessageInfo(nickname: "익명의 하이에나", content: "오늘은 치킨데리야끼 덮밥을 먹었다 양파 짱많음", date: "18.02.02", alignment: 1))
-        self.arrayList.append(ChatMessageInfo(nickname: "익명의 하이에나", content: "22222", date: "18.02.02", alignment: 1))
-        self.arrayList.append(ChatMessageInfo(nickname: "익명의 하이에나", content: "333333", date: "18.02.02", alignment: 1))
-        self.arrayList.append(ChatMessageInfo(nickname: "익명의 하이에나", content: "44444", date: "18.02.02", alignment: 1))
-        self.arrayList.append(ChatMessageInfo(nickname: "익명의 하이에나", content: "5555", date: "18.02.02", alignment: 1))
+        self.arrayList.append(ChatMessageInfo(nickname: "익명의 하이에나", content: "오늘은 치킨데리야끼 덮밥을 먹었다 양파 짱많음", date: "18.02.02", alignment: 0))
+        self.arrayList.append(ChatMessageInfo(nickname: "익명의 하이에나", content: "ㅎㅎㅎ즐겁당", date: "18.02.02", alignment: 1))
+        self.arrayList.append(ChatMessageInfo(nickname: "익명의 하이에나", content: "섬머고로꼬", date: "18.02.02", alignment: 0))
+        self.arrayList.append(ChatMessageInfo(nickname: "익명의 하이에나", content: "파리밴드", date: "18.02.02", alignment: 1))
+        self.arrayList.append(ChatMessageInfo(nickname: "익명의 하이에나", content: "디피알라이브으으", date: "18.02.02", alignment: 0))
     }
-    
 }

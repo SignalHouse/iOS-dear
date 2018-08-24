@@ -17,6 +17,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var sendButton: UIButton!
     
     var modelChat = ChatMessageModel.ChatMessageSingleTon
+    var otherNickname: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,16 +63,26 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
                     let response = value as! NSDictionary
                     //
                     //
-                    self.sendMessageText.text = ""
+                    
                     
                 case .failure(let error):
                     print(error)
                 }
         }
         
-        // for local
-//        self.modelChat.arrayList.append(ChatMessageInfo(nickname: (myInfo.mylogInfo?.nickname)!, content: sendMessageText.text!, date: "00.00", alignment: 0))
+        // for local (로그인 했을때)
+        if let nickname = myInfo.mylogInfo?.nickname {
+            self.modelChat.arrayList.append(ChatMessageInfo(nickname: (myInfo.mylogInfo?.nickname)!, content: sendMessageText.text!, date: "00.00", alignment: 0))
+        }
         
+        // (안했을때)
+        else {
+            self.modelChat.arrayList.append(ChatMessageInfo(nickname: "소여닝", content: sendMessageText.text!, date: "00.00", alignment: 0))
+        }
+        
+        self.sendMessageText.text = ""
+        
+        tableView.reloadData()
     }
     
     /* tableview setting */
@@ -88,9 +99,18 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let otherCell = tableView.dequeueReusableCell(withIdentifier: "OtherCell") as! ChatOtherTableViewCell
         
         // cell detail setting
-        meCell.myNickname.text = myInfo.mylogInfo?.nickname
+        // local 로그인 했을때
+        if let nickname = myInfo.mylogInfo?.nickname {
+            meCell.myNickname.text = myInfo.mylogInfo?.nickname
+        }
+        else { meCell.myNickname.text = "소여닝" }
+        meCell.myContent.text = modelChat.arrayList[indexPath.row].content
         
-        otherCell.senderNickname.text = modelChat.arrayList[indexPath.row].nickname
+        // otherNickname setting
+        if let nick = otherNickname {
+            otherCell.senderNickname.text = nick
+        }
+        else { otherCell.senderNickname.text = modelChat.arrayList[indexPath.row].nickname }
         otherCell.sendContent.text = modelChat.arrayList[indexPath.row].content
         
         if(indexPath.row % 2 != 0) { return meCell}
