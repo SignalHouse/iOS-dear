@@ -123,12 +123,26 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     // setting Letter
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    
-            let cell : LetterCollectionViewCell! = collectionView.dequeueReusableCell(withReuseIdentifier: "LetterCell", for: indexPath) as! LetterCollectionViewCell
-    
-            let info = self.modelLetter.arrayList[indexPath.row]
+        let cell : LetterCollectionViewCell! = collectionView.dequeueReusableCell(withReuseIdentifier: "LetterCell", for: indexPath) as! LetterCollectionViewCell
+        let info = self.modelLetter.arrayList[indexPath.row]
+        
+        if (info.isNew) {
+            cell.title.isHidden = true
+            cell.content.isHidden = true
+            cell.recentLabel.isHidden = true
+            cell.underline.isHidden = true
+            cell.backImg.isHighlighted = true
+        }
+        else
+        {
+            cell.title.isHidden = false
+            cell.content.isHidden = false
+            cell.recentLabel.isHidden = false
+            cell.underline.isHidden = false
             cell.title.text = info.senderNickname
             cell.content.text = info.content
+            cell.backImg.isHighlighted = false
+        }
             return cell
     }
     
@@ -140,6 +154,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             let cell = sender as! UICollectionViewCell
             let indexPath: IndexPath! =  self.collectionView.indexPath(for: cell)
             dest.title =  modelLetter.arrayList[indexPath.row].senderNickname
+            modelLetter.arrayList[indexPath.row].isNew = false
         }
     }
     

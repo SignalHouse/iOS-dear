@@ -11,8 +11,11 @@ import UIKit
 class LetterCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var title: UILabel!
-    
     @IBOutlet weak var content: UILabel!
+    @IBOutlet weak var backImg: UIImageView!
+    @IBOutlet weak var recentLabel: UILabel!
+    @IBOutlet weak var underline: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
