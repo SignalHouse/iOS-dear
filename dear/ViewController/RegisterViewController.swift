@@ -50,8 +50,8 @@ class RegisterViewController: UIViewController {
         let randomIndexColor = Int(arc4random_uniform(UInt32(colorNames.count)))
         let randomIndexAnimal = Int(arc4random_uniform(UInt32(animalNames.count)))
         
-        var colorName = colorNames[randomIndexColor]
-        var animalName = animalNames[randomIndexAnimal]
+        let colorName = colorNames[randomIndexColor]
+        let animalName = animalNames[randomIndexAnimal]
         resultNickname = colorName + " " + animalName
         
         return resultNickname

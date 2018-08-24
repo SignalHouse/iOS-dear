@@ -10,6 +10,7 @@ pod 'Socket.IO-Client-Swift', '~> 13.3.0'
 pod 'KYDrawerController'
 pod 'SideMenu'
 pod 'SwiftyTimer'
+pod 'SwiftSocket'
   # Pods for dear
 
 end

@@ -10,6 +10,7 @@ import UIKit
 import SocketIO
 import Alamofire
 import SideMenu
+import SwiftSocket
 
 class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     @IBOutlet weak var tableView: UITableView!
@@ -17,6 +18,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var sendButton: UIButton!
     
     var modelChat = ChatMessageModel.ChatMessageSingleTon
+    var socketIOSingleTon = SocketIOManager.socketSingleTon
     var otherNickname: String?
     
     override func viewDidLoad() {
@@ -44,45 +46,50 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         SideMenuManager.default.menuShadowRadius = 100
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        // 메시지 받아오기
+//        socketIOSingleTon.getChatMessage(completionHandler: (messageInfo) -> Void in
+//            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+//            self.modelChat.append(messageInfo)
+//            self.tblChat.reloadData()
+//            }))
+    }
+    
+    // 테이블 뷰 새로고침 후 스크롤 맨 밑으로 이동
+    func reloadTableView() {
+        tableView.reloadData()
+        let indexPath = IndexPath(row: modelChat.arrayList.count - 1, section: 0)
+        tableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
+    }
     
     @IBAction func sendButtonPressed(_ sender: Any) {
-        // for server
-        let content = sendMessageText.text!
+        // 텍스트필드에 값이 있을 경우
+        if let content = sendMessageText.text {
+            // for server
+            socketIOSingleTon.sendMessage(message: content, withEmail: (myInfo.mylogInfo?.email)!)
+            // 키보드 아래로 숨기기
+            sendMessageText.resignFirstResponder()
+            
+            // for local (로그인 했을때)
+            if let nickname = myInfo.mylogInfo?.nickname {
+                self.modelChat.arrayList.append(ChatMessageInfo(nickname: (myInfo.mylogInfo?.nickname)!, content: sendMessageText.text!, date: "00.00", alignment: 0))
+            }
         
-        let parameters: [String: String] = [
-            "content" : content
-        ]
-        
-        // 편지 전송 후 작업 수행
-        Alamofire.request("http://192.168.1.162:8000/api/user", method: .post, parameters: parameters, encoding: JSONEncoding.default)
-            .responseJSON
-            { response in
-                switch response.result {
-                case.success(let value):
-                    print("Success with JSON: \(value)")
-                    let response = value as! NSDictionary
-                    //
-                    //
-                    
-                    
-                case .failure(let error):
-                    print(error)
-                }
-        }
-        
-        // for local (로그인 했을때)
-        if let nickname = myInfo.mylogInfo?.nickname {
-            self.modelChat.arrayList.append(ChatMessageInfo(nickname: (myInfo.mylogInfo?.nickname)!, content: sendMessageText.text!, date: "00.00", alignment: 0))
-        }
-        
-        // (안했을때)
+            // (안했을때)
+            else {
+                self.modelChat.arrayList.append(ChatMessageInfo(nickname: "소여닝", content: sendMessageText.text!, date: "00.00", alignment: 0))
+            }
+            
+            // 텍스트필드 값 초기화
+            self.sendMessageText.text = ""
+            }
+        // 텍스트필드에 값이 없을 경우
         else {
-            self.modelChat.arrayList.append(ChatMessageInfo(nickname: "소여닝", content: sendMessageText.text!, date: "00.00", alignment: 0))
+            print("입력하세용")
         }
         
-        self.sendMessageText.text = ""
-        
-        tableView.reloadData()
+        reloadTableView()
     }
     
     /* tableview setting */
@@ -115,6 +122,32 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         if(indexPath.row % 2 != 0) { return meCell}
         else { return otherCell}
+        
+        
+        
+        /* Cell 하나로만 쓰기*/
+        /*
+        let cell = tableView.dequeueReusableCellWithIdentifier("idCellChat", forIndexPath: indexPath) as! ChatCell
+        
+        let currentChatMessage = chatMessages[indexPath.row]
+        let senderNickname = currentChatMessage["nickname"] as! String
+        let message = currentChatMessage["message"] as! String
+        let messageDate = currentChatMessage["date"] as! String
+        
+        if senderNickname == nickname {
+            cell.lblChatMessage.textAlignment = NSTextAlignment.Right
+            cell.lblMessageDetails.textAlignment = NSTextAlignment.Right
+            
+            cell.lblChatMessage.textColor = lblNewsBanner.backgroundColor
+        }
+        
+        cell.lblChatMessage.text = message
+        cell.lblMessageDetails.text = "by \(senderNickname.uppercaseString) @ \(messageDate)"
+        
+        cell.lblChatMessage.textColor = UIColor.darkGrayColor()
+        
+        return cell
+         */
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
