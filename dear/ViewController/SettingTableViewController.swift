@@ -33,7 +33,9 @@ class SettingTableViewController: UITableViewController {
         
         // nickname init
         myNicknameText.isEnabled = false
-        myNicknameText.text = myInfo.mylogInfo?.nickname
+        if let nick = myInfo.mylogInfo?.nickname {
+            myNicknameText.text = nick
+        }
     }
     
     @IBAction func switchPressed(_ sender: UISwitch) {

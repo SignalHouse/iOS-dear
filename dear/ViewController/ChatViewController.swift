@@ -18,7 +18,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var sendButton: UIButton!
     
     var modelChat = ChatMessageModel.ChatMessageSingleTon
-    var socketIOSingleTon = SocketIOManager.socketSingleTon
+//    var socketIOSingleTon = SocketIOManager.socketSingleTon
     var otherNickname: String?
     
     override func viewDidLoad() {
@@ -54,6 +54,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
 //            self.modelChat.append(messageInfo)
 //            self.tblChat.reloadData()
 //            }))
+        reloadTableView()
     }
     
     // 테이블 뷰 새로고침 후 스크롤 맨 밑으로 이동
@@ -67,7 +68,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // 텍스트필드에 값이 있을 경우
         if let content = sendMessageText.text {
             // for server
-            socketIOSingleTon.sendMessage(message: content, withEmail: (myInfo.mylogInfo?.email)!)
+//            socketIOSingleTon.sendMessage(message: content, withEmail: (myInfo.mylogInfo?.email)!)
             // 키보드 아래로 숨기기
             sendMessageText.resignFirstResponder()
             

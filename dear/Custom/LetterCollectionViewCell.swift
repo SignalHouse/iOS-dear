@@ -15,6 +15,7 @@ class LetterCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var backImg: UIImageView!
     @IBOutlet weak var recentLabel: UILabel!
     @IBOutlet weak var underline: UIView!
+    @IBOutlet weak var checkButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "dear/ViewController/SettingTableViewController.swift"
-            timestampString = "556738624.38449"
+            timestampString = "556813864.692405"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "11"
@@ -165,7 +165,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "dear/ViewController/ChatViewController.swift"
-            timestampString = "556803615.199087"
+            timestampString = "556813864.692479"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
@@ -181,7 +181,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "dear/ViewController/ChatSidemenuTableViewController.swift"
-            timestampString = "556803615.199807"
+            timestampString = "556813864.692937"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "21"
@@ -197,7 +197,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "dear/ViewController/ChatSidemenuTableViewController.swift"
-            timestampString = "556803615.1998971"
+            timestampString = "556813864.693213"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
@@ -213,7 +213,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "dear/ViewController/AlertViewController.swift"
-            timestampString = "556738624.385891"
+            timestampString = "556813864.6934381"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "7"
@@ -225,11 +225,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "dear/ViewController/AlertViewController.swift"
-            timestampString = "556738624.385971"
+            timestampString = "556813864.693485"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "15"
@@ -245,13 +245,29 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "dear/Custom/LetterCollectionViewCell.swift"
-            timestampString = "556803615.200181"
+            timestampString = "556813864.693529"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "6"
             endingLineNumber = "6"
             landmarkName = "unknown"
             landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dear/ViewController/ChatViewController.swift"
+            timestampString = "556813864.693719"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "sendButtonPressed(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -31,6 +31,9 @@ class UpdatePasswordTableViewController: UITableViewController {
         
         // password init
         currentPwText.text = "123456"
+        
+        // for empty cell no line
+        tableView.tableFooterView = UIView()
     }
 
     override func didReceiveMemoryWarning() {

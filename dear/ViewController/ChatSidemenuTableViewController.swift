@@ -50,7 +50,16 @@ class ChatSidemenuTableViewController: UITableViewController {
     }
     
     func goOut() {
-        print("퇴장")
+        showAlert()
+    }
+    
+    // 알림창 뜨기만 함...!
+    func showAlert() {
+        let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let myAlert:AlertViewController = storyboard.instantiateViewController(withIdentifier: "alert") as! AlertViewController
+        myAlert.modalTransitionStyle = .coverVertical
+        myAlert.labelText = "정말 나가시겠어요?"
+        self.present(myAlert, animated: false, completion: nil)
     }
     
     
