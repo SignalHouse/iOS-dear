@@ -11,7 +11,7 @@ import Alamofire
 
 class WritingViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    var modelLetter = LetterModel.LetterModelSingleTon
+    var modelWaiting = WaitingLetterModel.WaitingLetterModelSingleTon
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,17 +32,17 @@ class WritingViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.modelLetter.arrayList.count
+        return self.modelWaiting.arrayList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell : WaitingCollectionViewCell! = collectionView.dequeueReusableCell(withReuseIdentifier: "WaitingCell", for: indexPath) as! WaitingCollectionViewCell
         
-        let info = self.modelLetter.arrayList[indexPath.row]
+        let info = self.modelWaiting.arrayList[indexPath.row]
 //        cell.title.text = info.senderNickname
         cell.content.text = info.content
         return cell
     }
-
+    
 }

@@ -22,6 +22,7 @@
 		102A3102212FFD7E00BCF264 /* SocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A3101212FFD7E00BCF264 /* SocketIOManager.swift */; };
 		102A310421300EC300BCF264 /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A310321300EC300BCF264 /* SocketManager.swift */; };
 		102A310621304F5D00BCF264 /* WaitingLetterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A310521304F5D00BCF264 /* WaitingLetterModel.swift */; };
+		102A31082130877A00BCF264 /* AlertCancelAddedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A31072130877A00BCF264 /* AlertCancelAddedViewController.swift */; };
 		104C72B62125AA1D00D1C4C6 /* MemberModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104C72B52125AA1D00D1C4C6 /* MemberModel.swift */; };
 		106CBB2A212D3B4B00679975 /* ChatSidemenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CBB29212D3B4B00679975 /* ChatSidemenuTableViewController.swift */; };
 		106CBB30212D5DFF00679975 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CBB2F212D5DFF00679975 /* AlertViewController.swift */; };
@@ -63,6 +64,7 @@
 		102A3101212FFD7E00BCF264 /* SocketIOManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketIOManager.swift; sourceTree = "<group>"; };
 		102A310321300EC300BCF264 /* SocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketManager.swift; sourceTree = "<group>"; };
 		102A310521304F5D00BCF264 /* WaitingLetterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingLetterModel.swift; sourceTree = "<group>"; };
+		102A31072130877A00BCF264 /* AlertCancelAddedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCancelAddedViewController.swift; sourceTree = "<group>"; };
 		104C72B52125AA1D00D1C4C6 /* MemberModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberModel.swift; sourceTree = "<group>"; };
 		106CBB29212D3B4B00679975 /* ChatSidemenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSidemenuTableViewController.swift; sourceTree = "<group>"; };
 		106CBB2F212D5DFF00679975 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				106CBB29212D3B4B00679975 /* ChatSidemenuTableViewController.swift */,
 				106CBB2F212D5DFF00679975 /* AlertViewController.swift */,
 				101F18B8212F072E0004BE98 /* WriteViewController.swift */,
+				102A31072130877A00BCF264 /* AlertCancelAddedViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				10FCA03321281E3A002A78B3 /* LetterCollectionViewCell.swift in Sources */,
 				101C9DB02122AB9E00DA25CC /* RegisterViewController.swift in Sources */,
 				106CBB30212D5DFF00679975 /* AlertViewController.swift in Sources */,
+				102A31082130877A00BCF264 /* AlertCancelAddedViewController.swift in Sources */,
 				A03BC06D2110284F00D14FB7 /* dear.xcdatamodeld in Sources */,
 				1026F5D5212BE4DE00137D2B /* UpdatePasswordTableViewController.swift in Sources */,
 				102A3100212FD5C800BCF264 /* WaitingTableViewCell.swift in Sources */,

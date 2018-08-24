@@ -13,6 +13,7 @@ class WriteViewController: UIViewController {
 
     @IBOutlet weak var letterTitleText: UITextField!
     @IBOutlet weak var letterContentText: UITextField!
+    var modelWaiting = WaitingLetterModel.WaitingLetterModelSingleTon
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +39,11 @@ class WriteViewController: UIViewController {
                     let response = value as! NSDictionary
                     //
                     //
+                    
+                    // 발송 예정 편지함에 추가
+                    self.modelWaiting.arrayList.append(WaitingLetterInfo(title: title, content: content, id: 2, date: "22"))
+                    // 이전 화면으로 이동
+                    self.navigationController?.popViewController(animated: true)
                     
                 case .failure(let error):
                     print(error)
