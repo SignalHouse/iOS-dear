@@ -73,44 +73,58 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let parameters: [String: String] = [
             "description" : content
         ]
-        
-        Alamofire.request("http://192.168.1.33/api/message", method: .post, parameters: ["access_token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiIxMTFAMTExIiwibmFtZSI6Iuy0iOuhneyDiSDtmLjrnpHsnbQiLCJpYXQiOjE1MzUxNjk4MTQsImV4cCI6MTUzNTM0MjYxNH0.B0liwIfaKs9d0_PMu6U1Qgd0qdxJ3WogjJOMInQFu9Q"], encoding: JSONEncoding.default)
+
+        // token 값 바꿔야 함
+        Alamofire.request("http://192.168.1.33/api/message?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiIxMTFAMTExIiwibmFtZSI6Iuy0iOuhneyDiSDtmLjrnpHsnbQiLCJpYXQiOjE1MzUxNjk4MTQsImV4cCI6MTUzNTM0MjYxNH0.B0liwIfaKs9d0_PMu6U1Qgd0qdxJ3WogjJOMInQFu9Q", method: .post, parameters: parameters, encoding: JSONEncoding.default)
             .responseJSON
             { response in
                 switch response.result {
                 case.success(let value):
-                    print("Success with JSON: \(value)")
                     let response = value as! NSDictionary
                     //
                     //
-                    print(parameters)
-                    
+                    print("Success with JSON: \(value)")
                     
                 case .failure(let error):
                     print("message error : \(error)")
                 }
         }
-    
-        
     }
     
     // 메시지 받아오기
     func getChatNewMessage() -> String {
         var resultMessage = ""
-        Alamofire.request(
-            "http://<Your URL>",
-            method: .get,
-            parameters: [:],
-            encoding: URLEncoding.default,
-            headers: ["Content-Type":"application/json", "Accept":"application/json"]
-            )
-            .validate(statusCode: 200..<300)
-            .responseJSON {
-                response in
-                if let JSON = response.result.value {
-                    print(JSON)
+//        Alamofire.request(
+//            "http://<Your URL>",
+//            method: .get,
+//            parameters: [:],
+//            encoding: URLEncoding.default,
+//            headers: ["Content-Type":"application/json", "Accept":"application/json"]
+//            )
+//            .validate(statusCode: 200..<300)
+//            .responseJSON {
+//                response in
+//                if let JSON = response.result.value {
+//                    print(JSON)
+//                }
+//        }
+        
+        // token 값 바꿔야 함
+        Alamofire.request("http://192.168.1.33/api/message/my?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiIxMTFAMTExIiwibmFtZSI6Iuy0iOuhneyDiSDtmLjrnpHsnbQiLCJpYXQiOjE1MzUxNjk4MTQsImV4cCI6MTUzNTM0MjYxNH0.B0liwIfaKs9d0_PMu6U1Qgd0qdxJ3WogjJOMInQFu9Q", method: .get,  encoding: JSONEncoding.default)
+            .responseJSON
+            { response in
+                switch response.result {
+                case.success(let value):
+                    let response = value as! NSDictionary
+                    //
+                    //
+                    print("Success with JSON: \(value)")
+                    
+                case .failure(let error):
+                    print("message error : \(error)")
                 }
         }
+        
         return resultMessage
     }
     
