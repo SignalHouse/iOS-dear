@@ -66,22 +66,21 @@ class RegisterViewController: UIViewController {
         let nickname = nicknameText.text!
         
         let parameters: [String: String] = [
-            "id" : id,
-            "name" : nickname,
             "email" : email,
+            "name" : nickname,
             "password" : password
         ]
         
         // parsing 후 token에 저장
-        Alamofire.request("http://192.168.1.162:8000/api/user", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+        Alamofire.request("http://192.168.1.33/api/user/", method: .post, parameters: parameters, encoding: JSONEncoding.default)
             .responseJSON
             { response in
                 switch response.result {
                 case.success(let value):
                     print("Success with JSON: \(value)")
-                    let response = value as! NSDictionary
-                    self.appDelegate.token = "\(response.object(forKey: "token")!)"
-                    print(self.appDelegate.token!)
+                    let tokenResponse = value as! NSDictionary
+                    UserDefaults.standard.set(tokenResponse, forKey: "token")
+                    print(tokenResponse)
                     
                 case .failure(let error):
                     print(error)
