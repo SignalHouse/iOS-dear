@@ -56,6 +56,12 @@ class RegisterViewController: UIViewController {
         
         return resultNickname
     }
+    
+    func showMain() {
+        let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let mainview = storyboard.instantiateViewController(withIdentifier: "mainview")
+        self.present(mainview, animated: true, completion: nil)
+    }
 
     // 회원가입 테스트
     @IBAction func SignupPressed(_ sender: Any) {
@@ -81,16 +87,17 @@ class RegisterViewController: UIViewController {
                     let tokenResponse = value as! NSDictionary
                     UserDefaults.standard.set(tokenResponse, forKey: "token")
                     print(tokenResponse)
+                    self.showMain()
                     
                 case .failure(let error):
                     print(error)
                 }
         }
         
-        // for local
-        modelMember.arrayList.append(MemberInfo(email: email, nickname: nickname, password: password))
-        
-        // popView
-        navigationController?.popViewController(animated: true)
+//        // for local
+//        modelMember.arrayList.append(MemberInfo(email: email, nickname: nickname, password: password))
+//
+//        // popView
+//        navigationController?.popViewController(animated: true)
     }
 }

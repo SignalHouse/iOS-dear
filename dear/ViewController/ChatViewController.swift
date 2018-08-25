@@ -71,10 +71,10 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func sendChatMessage(content:String) {
         // for server
         let parameters: [String: String] = [
-            "content" : content
+            "description" : content
         ]
         
-        Alamofire.request("http://192.168.1.162:8000/api/user", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+        Alamofire.request("http://192.168.1.33/api/message", method: .post, parameters: ["access_token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiIxMTFAMTExIiwibmFtZSI6Iuy0iOuhneyDiSDtmLjrnpHsnbQiLCJpYXQiOjE1MzUxNjk4MTQsImV4cCI6MTUzNTM0MjYxNH0.B0liwIfaKs9d0_PMu6U1Qgd0qdxJ3WogjJOMInQFu9Q"], encoding: JSONEncoding.default)
             .responseJSON
             { response in
                 switch response.result {
@@ -83,12 +83,14 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
                     let response = value as! NSDictionary
                     //
                     //
+                    print(parameters)
                     
                     
                 case .failure(let error):
-                    print(error)
+                    print("message error : \(error)")
                 }
         }
+    
         
     }
     

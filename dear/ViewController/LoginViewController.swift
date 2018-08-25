@@ -115,12 +115,12 @@ class LoginViewController: UIViewController, BWWalkthroughViewControllerDelegate
                         let response = value as! NSDictionary
                         // 작업 수행
                         //
-                        let str = UserDefaults.standard.object(forKey: "token")
-                        
                         // token을 받아왔을 경우
-                        if (str != nil) {
-                            print("login success : \(str)")
-                            self.showMain() }
+                        if (response != nil) {
+                            UserDefaults.standard.set(response, forKey: "token")
+                            print("login success : \(response)")
+                            self.showMain()
+                        }
                             
                         // 받지 못했을 경우
                         else {
