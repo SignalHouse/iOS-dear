@@ -18,7 +18,9 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var noMessageLabel: UILabel!
     var modelChat = ChatMessageModel.ChatMessageSingleTon
+    var socket = SocketManager()
     var otherNickname: String?
+    let tokenManger = TokenManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,11 +54,6 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         // 메시지 받아오기
-//        socketIOSingleTon.getChatMessage(completionHandler: (messageInfo) -> Void in
-//            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-//            self.modelChat.append(messageInfo)
-//            self.tblChat.reloadData()
-//            }))
         reloadTableView()
     }
     
@@ -75,7 +72,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         ]
 
         // token 값 바꿔야 함
-        Alamofire.request("http://192.168.1.33/api/message?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiIxMTFAMTExIiwibmFtZSI6Iuy0iOuhneyDiSDtmLjrnpHsnbQiLCJpYXQiOjE1MzUxNjk4MTQsImV4cCI6MTUzNTM0MjYxNH0.B0liwIfaKs9d0_PMu6U1Qgd0qdxJ3WogjJOMInQFu9Q", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+        Alamofire.request("http://192.168.219.107:8000/api/message?access_token=\(tokenManger.getMyToken())", method: .post, parameters: parameters, encoding: JSONEncoding.default)
             .responseJSON
             { response in
                 switch response.result {
@@ -84,47 +81,45 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
                     //
                     //
                     print("Success with JSON: \(value)")
-                    
+
                 case .failure(let error):
-                    print("message error : \(error)")
+                    print("message take error : \(error)")
                 }
         }
+        
+        // socket
+//        let client = socket.client
+//        socket.SS_sendMessage(timeout: 10, message: content)
     }
     
     // 메시지 받아오기
     func getChatNewMessage() -> String {
+        var resultArray:Array<AnyObject> = []
+        var resultTime = ""
         var resultMessage = ""
-//        Alamofire.request(
-//            "http://<Your URL>",
-//            method: .get,
-//            parameters: [:],
-//            encoding: URLEncoding.default,
-//            headers: ["Content-Type":"application/json", "Accept":"application/json"]
-//            )
-//            .validate(statusCode: 200..<300)
-//            .responseJSON {
-//                response in
-//                if let JSON = response.result.value {
-//                    print(JSON)
-//                }
-//        }
         
-        // token 값 바꿔야 함
-        Alamofire.request("http://192.168.1.33/api/message/my?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiIxMTFAMTExIiwibmFtZSI6Iuy0iOuhneyDiSDtmLjrnpHsnbQiLCJpYXQiOjE1MzUxNjk4MTQsImV4cCI6MTUzNTM0MjYxNH0.B0liwIfaKs9d0_PMu6U1Qgd0qdxJ3WogjJOMInQFu9Q", method: .get,  encoding: JSONEncoding.default)
+        // server
+        Alamofire.request("http://192.168.219.107:8000/api/message/my?access_token=\(tokenManger.getMyToken())", method: .get,  encoding: JSONEncoding.default)
             .responseJSON
             { response in
                 switch response.result {
-                case.success(let value):
-                    let response = value as! NSDictionary
-                    //
-                    //
-                    print("Success with JSON: \(value)")
-                    
+                case.success:
+                    if let res = response.result.value as? NSDictionary {
+                        if let message = res["message"] as? String {
+                            resultMessage = message
+                            print("message send success : \(resultMessage)")
+                        }
+                        if let time = res["created"] as? String {
+                            resultTime = time
+                            print("message send success : \(resultTime)")
+                        }
+                    }
                 case .failure(let error):
-                    print("message error : \(error)")
+                    print("message send error : \(error)")
                 }
         }
         
+//        return resultArray
         return resultMessage
     }
     

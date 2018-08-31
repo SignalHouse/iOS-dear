@@ -35,6 +35,7 @@
 		106CC5EB2126E10900E24274 /* LetterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CC5EA2126E10900E24274 /* LetterModel.swift */; };
 		106CC5ED2126F06F00E24274 /* WalkThrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 106CC5EC2126F06F00E24274 /* WalkThrough.storyboard */; };
 		106CC5EF2126F11300E24274 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 106CC5EE2126F11200E24274 /* Main.storyboard */; };
+		106D392D2139A9EB00E4595A /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106D392C2139A9EB00E4595A /* TokenManager.swift */; };
 		10FCA03321281E3A002A78B3 /* LetterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FCA03221281E39002A78B3 /* LetterCollectionViewCell.swift */; };
 		10FCA0352128222E002A78B3 /* WaitingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FCA0342128222E002A78B3 /* WaitingCollectionViewCell.swift */; };
 		10FCA03721282B95002A78B3 /* WritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FCA03621282B95002A78B3 /* WritingViewController.swift */; };
@@ -77,6 +78,7 @@
 		106CC5EA2126E10900E24274 /* LetterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterModel.swift; sourceTree = "<group>"; };
 		106CC5EC2126F06F00E24274 /* WalkThrough.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WalkThrough.storyboard; sourceTree = "<group>"; };
 		106CC5EE2126F11200E24274 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		106D392C2139A9EB00E4595A /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
 		10FCA03221281E39002A78B3 /* LetterCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterCollectionViewCell.swift; sourceTree = "<group>"; };
 		10FCA0342128222E002A78B3 /* WaitingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingCollectionViewCell.swift; sourceTree = "<group>"; };
 		10FCA03621282B95002A78B3 /* WritingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				102A3101212FFD7E00BCF264 /* SocketIOManager.swift */,
 				102A310321300EC300BCF264 /* SocketManager.swift */,
 				102A310521304F5D00BCF264 /* WaitingLetterModel.swift */,
+				106D392C2139A9EB00E4595A /* TokenManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				101F18B9212F072E0004BE98 /* WriteViewController.swift in Sources */,
+				106D392D2139A9EB00E4595A /* TokenManager.swift in Sources */,
 				1026F5CF212BD54200137D2B /* SettingTableViewController.swift in Sources */,
 				1023B8272121F1B000254F7F /* LoginViewController.swift in Sources */,
 				106CC5EB2126E10900E24274 /* LetterModel.swift in Sources */,

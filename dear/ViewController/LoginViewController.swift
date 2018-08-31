@@ -17,6 +17,7 @@ class LoginViewController: UIViewController, BWWalkthroughViewControllerDelegate
     @IBOutlet weak var statusLabel: UILabel!
     
     var modelMember = MemberModel.MemberSingleTon
+    var tokenManager = TokenManager()
     
     // 처음 어플 실행시만 워크쓰로우 페이지 노출
     override func viewDidAppear(_ animated: Bool) {
@@ -97,6 +98,7 @@ class LoginViewController: UIViewController, BWWalkthroughViewControllerDelegate
         // 형식은 만족하나 회원 정보가 없는 경우
         else {
             // for server
+            let tokenManager = TokenManager()
             let email = emailText.text!
             let password = passwordText.text!
             
@@ -106,45 +108,30 @@ class LoginViewController: UIViewController, BWWalkthroughViewControllerDelegate
             ]
             
             // token 저장
-            Alamofire.request("http://192.168.43.134/api/user/login", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+            Alamofire.request("http://192.168.219.107:7000/api/user/login", method: .post, parameters: parameters, encoding: JSONEncoding.default)
                 .responseJSON
                 { response in
-                    Alamofire.request("http://192.168.219.107:7000/api/user/login", method: .post, parameters: parameters, encoding: JSONEncoding.default)
-                        .responseJSON
-                        { response in
-                            switch response.result {
-                            case.success:
-                                if let res = response.result.value as? NSDictionary {
-                                    // json parsing
-                                    if let tokenResponse = res["token"] as? String {
-                                        UserDefaults.standard.set(tokenResponse, forKey: "token")
-                                        print("login success : \(tokenResponse)")
-                                        self.showMain()
-                                    }
-                                }
-                                else {
-                                    print("login fail")
-                                    self.showAlert()
-                                }
-                                
-                            case .failure(let error):
-                                print("login fail - server : \(error)")
-                                self.showAlert()
-                            }
+                    switch response.result {
+                    case.success:
+                        if let res = response.result.value as? NSDictionary {
+                            tokenManager.setMyToken(tokenResponse: res["token"] as! String)
+                            print("login success : \(tokenManager.getMyToken())")
+                            self.showMain()
+                        }
+                        else {
+                            print("222")
+                            self.showAlert()
+                        }
+                        if response.result.value == nil {
+                            print("333")
+                            self.showAlert()
+                        }
+                        
+                    case .failure(let error):
+                        print("login fail - server : \(error)")
+                        self.showAlert()
                     }
             }
-            // for local
-//            let myMemberInfo = modelMember.findUser(email: emailText.text!)
-//            if myMemberInfo?.password != passwordText.text {
-//                showAlert()
-//            }
-//            else {
-//                //myInfo에 사용자 저장
-//                myInfo.mylogInfo = myMemberInfo!
-//                showMain()
-//            }
         }
     }
-    
-    
 }

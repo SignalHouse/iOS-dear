@@ -14,42 +14,14 @@ class WriteViewController: UIViewController {
     @IBOutlet weak var letterTitleText: UITextField!
     @IBOutlet weak var letterContentText: UITextField!
     var modelWaiting = WaitingLetterModel.WaitingLetterModelSingleTon
+    var tokenManager = TokenManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    func getMyToken() -> String{
-        let token = UserDefaults.standard.object(forKey: "token")
-        return token as! String
-    }
-
-    // 메시지 받아오기
-    func getChatNewMessage() -> String {
-        var resultMessage = ""
-        // token 값 바꿔야 함
-        Alamofire.request("http://192.168.1.33/api/message/my?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiIxMTFAMTExIiwibmFtZSI6Iuy0iOuhneyDiSDtmLjrnpHsnbQiLCJpYXQiOjE1MzUxNjk4MTQsImV4cCI6MTUzNTM0MjYxNH0.B0liwIfaKs9d0_PMu6U1Qgd0qdxJ3WogjJOMInQFu9Q", method: .get,  encoding: JSONEncoding.default)
-            .responseJSON
-            { response in
-                switch response.result {
-                case.success(let value):
-                    let response = value as! NSDictionary
-                    //
-                    //
-                    print("Success with JSON: \(value)")
-                    
-                case .failure(let error):
-                    print("message error : \(error)")
-                }
-        }
-        
-        return resultMessage
-    }
-    
-    
     @IBAction func sendButtonPressed(_ sender: Any) {
         // for server
-        let token = getMyToken()
         let title = letterTitleText.text!
         let content = letterContentText.text!
         
@@ -57,8 +29,7 @@ class WriteViewController: UIViewController {
             "description" : content
         ]
         
-        // token 값 바꿔야 함
-        Alamofire.request("http://192.168.219.107:8000/api/message?access_token=\(token)", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+        Alamofire.request("http://192.168.219.107:8000/api/message?access_token=\(tokenManager.getMyToken())", method: .post, parameters: parameters, encoding: JSONEncoding.default)
             .responseJSON
             { response in
                 switch response.result {
