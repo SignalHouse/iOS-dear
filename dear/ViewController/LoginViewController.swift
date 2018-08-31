@@ -106,34 +106,33 @@ class LoginViewController: UIViewController, BWWalkthroughViewControllerDelegate
             ]
             
             // token 저장
-            Alamofire.request("http://192.168.1.33/api/user/login", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+            Alamofire.request("http://192.168.43.134/api/user/login", method: .post, parameters: parameters, encoding: JSONEncoding.default)
                 .responseJSON
                 { response in
-                    switch response.result {
-                    case.success(let value):
-                        print("Success with JSON: \(value)")
-                        let response = value as! NSDictionary
-                        // 작업 수행
-                        //
-                        // token을 받아왔을 경우
-                        if (response != nil) {
-                            UserDefaults.standard.set(response, forKey: "token")
-                            print("login success : \(response)")
-                            self.showMain()
-                        }
-                            
-                        // 받지 못했을 경우
-                        else {
-                            print("login fail")
-                            self.showAlert()
-                        }
-                        
-                    case .failure(let error):
-                        print("login fail - server : \(error)")
-                        self.showAlert()
+                    Alamofire.request("http://192.168.219.107:7000/api/user/login", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+                        .responseJSON
+                        { response in
+                            switch response.result {
+                            case.success:
+                                if let res = response.result.value as? NSDictionary {
+                                    // json parsing
+                                    if let tokenResponse = res["token"] as? String {
+                                        UserDefaults.standard.set(tokenResponse, forKey: "token")
+                                        print("login success : \(tokenResponse)")
+                                        self.showMain()
+                                    }
+                                }
+                                else {
+                                    print("login fail")
+                                    self.showAlert()
+                                }
+                                
+                            case .failure(let error):
+                                print("login fail - server : \(error)")
+                                self.showAlert()
+                            }
                     }
             }
-            
             // for local
 //            let myMemberInfo = modelMember.findUser(email: emailText.text!)
 //            if myMemberInfo?.password != passwordText.text {

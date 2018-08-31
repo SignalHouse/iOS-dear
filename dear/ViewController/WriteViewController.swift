@@ -19,6 +19,10 @@ class WriteViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    func getMyToken() -> String{
+        let token = UserDefaults.standard.object(forKey: "token")
+        return token as! String
+    }
 
     // 메시지 받아오기
     func getChatNewMessage() -> String {
@@ -45,6 +49,7 @@ class WriteViewController: UIViewController {
     
     @IBAction func sendButtonPressed(_ sender: Any) {
         // for server
+        let token = getMyToken()
         let title = letterTitleText.text!
         let content = letterContentText.text!
         
@@ -53,7 +58,7 @@ class WriteViewController: UIViewController {
         ]
         
         // token 값 바꿔야 함
-        Alamofire.request("http://192.168.1.33/api/message?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiIxMTFAMTExIiwibmFtZSI6Iuy0iOuhneyDiSDtmLjrnpHsnbQiLCJpYXQiOjE1MzUxNjk4MTQsImV4cCI6MTUzNTM0MjYxNH0.B0liwIfaKs9d0_PMu6U1Qgd0qdxJ3WogjJOMInQFu9Q", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+        Alamofire.request("http://192.168.219.107:8000/api/message?access_token=\(token)", method: .post, parameters: parameters, encoding: JSONEncoding.default)
             .responseJSON
             { response in
                 switch response.result {

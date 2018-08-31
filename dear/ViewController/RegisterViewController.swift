@@ -77,20 +77,22 @@ class RegisterViewController: UIViewController {
             "password" : password
         ]
         
-        // parsing 후 token에 저장
-        Alamofire.request("http://192.168.1.33/api/user/", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+        Alamofire.request("http://192.168.219.107:7000/api/user/", method: .post, parameters: parameters, encoding: JSONEncoding.default)
             .responseJSON
             { response in
                 switch response.result {
-                case.success(let value):
-                    print("Success with JSON: \(value)")
-                    let tokenResponse = value as! NSDictionary
-                    UserDefaults.standard.set(tokenResponse, forKey: "token")
-                    print(tokenResponse)
-                    self.showMain()
-                    
+                case.success:
+                    if let res = response.result.value as? NSDictionary {
+                        // json parsing
+                        if let tokenResponse = res["token"] as? String {
+                            UserDefaults.standard.set(tokenResponse, forKey: "token")
+                            print(tokenResponse)
+                            self.showMain()
+                        }
+                    }
+
                 case .failure(let error):
-                    print(error)
+                    print("auth error : \(error)")
                 }
         }
         
@@ -99,5 +101,7 @@ class RegisterViewController: UIViewController {
 //
 //        // popView
 //        navigationController?.popViewController(animated: true)
+        
+//        self.showMain()
     }
 }
