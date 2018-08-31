@@ -36,6 +36,7 @@
 		106CC5ED2126F06F00E24274 /* WalkThrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 106CC5EC2126F06F00E24274 /* WalkThrough.storyboard */; };
 		106CC5EF2126F11300E24274 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 106CC5EE2126F11200E24274 /* Main.storyboard */; };
 		106D392D2139A9EB00E4595A /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106D392C2139A9EB00E4595A /* TokenManager.swift */; };
+		106D392F2139AFCC00E4595A /* WaitingWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106D392E2139AFCC00E4595A /* WaitingWriteViewController.swift */; };
 		10FCA03321281E3A002A78B3 /* LetterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FCA03221281E39002A78B3 /* LetterCollectionViewCell.swift */; };
 		10FCA0352128222E002A78B3 /* WaitingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FCA0342128222E002A78B3 /* WaitingCollectionViewCell.swift */; };
 		10FCA03721282B95002A78B3 /* WritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FCA03621282B95002A78B3 /* WritingViewController.swift */; };
@@ -79,6 +80,7 @@
 		106CC5EC2126F06F00E24274 /* WalkThrough.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WalkThrough.storyboard; sourceTree = "<group>"; };
 		106CC5EE2126F11200E24274 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		106D392C2139A9EB00E4595A /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
+		106D392E2139AFCC00E4595A /* WaitingWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingWriteViewController.swift; sourceTree = "<group>"; };
 		10FCA03221281E39002A78B3 /* LetterCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterCollectionViewCell.swift; sourceTree = "<group>"; };
 		10FCA0342128222E002A78B3 /* WaitingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingCollectionViewCell.swift; sourceTree = "<group>"; };
 		10FCA03621282B95002A78B3 /* WritingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				106CBB2F212D5DFF00679975 /* AlertViewController.swift */,
 				101F18B8212F072E0004BE98 /* WriteViewController.swift */,
 				102A31072130877A00BCF264 /* AlertCancelAddedViewController.swift */,
+				106D392E2139AFCC00E4595A /* WaitingWriteViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				101752DA211C4899004FE9BA /* WorkThroughViewController.swift in Sources */,
 				106CC5E42126CD7B00E24274 /* HomeViewController.swift in Sources */,
 				102A310621304F5D00BCF264 /* WaitingLetterModel.swift in Sources */,
+				106D392F2139AFCC00E4595A /* WaitingWriteViewController.swift in Sources */,
 				106CC5E12126CAC400E24274 /* ResetPasswordViewController.swift in Sources */,
 				A03BC0652110284F00D14FB7 /* AppDelegate.swift in Sources */,
 				106CBB2A212D3B4B00679975 /* ChatSidemenuTableViewController.swift in Sources */,

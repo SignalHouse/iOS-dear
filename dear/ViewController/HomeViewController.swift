@@ -17,6 +17,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var remainCountLabel: UILabel!
     var timeArr:Array<String> = []
+    var isEditClicked:Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -118,13 +119,19 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     // 편집 버튼 눌렀을 때 액션 추가
     @objc func editButtonPressed(_ btn :UIButton) {
-        print("편집")
+        isEditClicked = !isEditClicked
+    }
+    
+    @objc func deleteLetter(_ sender :UIButton) {
+        
     }
     
     // setting Letter
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell : LetterCollectionViewCell! = collectionView.dequeueReusableCell(withReuseIdentifier: "LetterCell", for: indexPath) as! LetterCollectionViewCell
         let info = self.modelLetter.arrayList[indexPath.row]
+        cell.checkButton?.isHidden = !isEditClicked
+        cell.checkButton?.addTarget(self, action: #selector(self.deleteLetter(_:)), for: UIControlEvents.touchUpInside)
         
         if (info.isNew) {
             cell.title.isHidden = true
