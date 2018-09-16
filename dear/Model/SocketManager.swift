@@ -14,12 +14,15 @@ class SocketManager {
     let token:String = UserDefaults.standard.object(forKey: "token") as! String
     
     // URL 설정
-    let client = TCPClient(address: "http://192.168.219.107/api/message/my?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsImVtYWlsIjoiMUAxIiwibmFtZSI6Iu2VmOuKmOyDiSDqsJzqtazrpqwiLCJpYXQiOjE1MzU3MzIxNjUsImV4cCI6MTUzNTkwNDk2NX0.v4vy16vvUlGY1lKRcs1x8FMZH5RkqwbBrtaDyegg94w", port: Int32(8000))
+    let client = TCPClient(address: "http://192.168.1.33/", port: Int32(8080))
+    let server = TCPServer(address: "http://192.168.1.33/", port: 8080)
+    
     
     // 메시지 전송
     func SS_sendMessage(timeout:Int, message: String){
         switch client.connect(timeout: timeout) {
         case .success:
+            print("Socket connect")
             switch client.send(string: message) {
             case .success:
 //                guard let data = client.read(1024*10) else { return }
@@ -29,6 +32,29 @@ class SocketManager {
                 print("connectOK, message : \(message)")
             case .failure(let error):
                 print("connectOK, but: \(error)")
+            }
+        case .failure(let error):
+            print("connectNO, but: \(error)")
+        }
+    }
+    
+    func echoService(client: TCPClient) {
+        print("Newclient from:\(client.address)[\(client.port)]")
+        var d = client.read(1024*10)
+        client.send(data: d!)
+        client.close()
+    }
+    
+    func testServer() {
+        let server = TCPServer(address: "http://192.168.1.33/", port: 8080)
+        switch server.listen() {
+        case .success:
+            while true {
+                if var client = server.accept() {
+                    echoService(client: client)
+                } else {
+                    print("accept error")
+                }
             }
         case .failure(let error):
             print(error)

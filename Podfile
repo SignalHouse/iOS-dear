@@ -6,7 +6,8 @@ target 'dear' do
   use_frameworks!
 pod 'Alamofire', '~> 4.7'
 pod "BWWalkthrough"
-pod 'Socket.IO-Client-Swift', '~> 13.3.0'
+#pod 'Socket.IO-Client-Swift', '~> 12.1.3'
+pod 'Socket.IO-Client-Swift', :git => 'https://github.com/socketio/socket.io-client-swift.git', :branch => 'swift4.0'
 pod 'KYDrawerController'
 pod 'SideMenu'
 pod 'SwiftyTimer'

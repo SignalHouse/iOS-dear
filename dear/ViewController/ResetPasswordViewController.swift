@@ -48,7 +48,7 @@ class ResetPasswordViewController: UIViewController {
         ]
         
         
-        Alamofire.request("http://172.30.17.118:8000/api/user", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+        Alamofire.request("http://192.168.1.33/api/user", method: .post, parameters: parameters, encoding: JSONEncoding.default)
             .responseJSON
             { response in
                 switch response.result {

@@ -119,19 +119,20 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     // 편집 버튼 눌렀을 때 액션 추가
     @objc func editButtonPressed(_ btn :UIButton) {
+        collectionView.reloadData()
         isEditClicked = !isEditClicked
     }
     
     @objc func deleteLetter(_ sender :UIButton) {
-        
+        sender.isSelected = true
     }
     
     // setting Letter
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell : LetterCollectionViewCell! = collectionView.dequeueReusableCell(withReuseIdentifier: "LetterCell", for: indexPath) as! LetterCollectionViewCell
         let info = self.modelLetter.arrayList[indexPath.row]
-        cell.checkButton?.isHidden = !isEditClicked
-        cell.checkButton?.addTarget(self, action: #selector(self.deleteLetter(_:)), for: UIControlEvents.touchUpInside)
+        cell.checkButton.isHidden = !isEditClicked
+//        cell.checkButton.addTarget(self, action: #selector(self.deleteLetter(_:)), for: UIControlEvents.touchUpInside)
         
         if (info.isNew) {
             cell.title.isHidden = true

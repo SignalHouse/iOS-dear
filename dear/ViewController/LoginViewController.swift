@@ -108,7 +108,7 @@ class LoginViewController: UIViewController, BWWalkthroughViewControllerDelegate
             ]
             
             // token 저장
-            Alamofire.request("http://192.168.219.107:7000/api/user/login", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+            Alamofire.request("http://192.168.1.33/api/user/login", method: .post, parameters: parameters, encoding: JSONEncoding.default)
                 .responseJSON
                 { response in
                     switch response.result {
