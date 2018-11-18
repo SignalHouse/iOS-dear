@@ -77,7 +77,10 @@ class RegisterViewController: UIViewController {
             "password" : password
         ]
         
-        Alamofire.request("http://192.168.1.33/api/user/", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+        Alamofire.request(
+            "http://192.168.1.247/api/user/",
+//            "http://172.30.1.6:7000/api/user/",
+            method: .post, parameters: parameters, encoding: JSONEncoding.default)
             .responseJSON
             { response in
                 switch response.result {

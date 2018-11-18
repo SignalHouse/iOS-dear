@@ -29,7 +29,7 @@ class WriteViewController: UIViewController {
             "description" : content
         ]
         
-        Alamofire.request("http://192.168.1.33/api/message?access_token=\(tokenManager.getMyToken())", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+        Alamofire.request("http://172.30.1.6:8000/api/message?access_token=\(tokenManager.getMyToken())", method: .post, parameters: parameters, encoding: JSONEncoding.default)
             .responseJSON
             { response in
                 switch response.result {

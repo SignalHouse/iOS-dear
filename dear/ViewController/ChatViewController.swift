@@ -18,10 +18,11 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var noMessageLabel: UILabel!
     var modelChat = ChatMessageModel.ChatMessageSingleTon
-//    var socket = SocketManager()
-//    var sssocket = SocketIOManager()
     var otherNickname: String?
     let tokenManger = TokenManager()
+    let socket = SocketIOClient(
+        socketURL: URL(string: "http://192.168.1.247:8080")!,
+        config: [.log(true), .compress])
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,91 +65,25 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let indexPath = IndexPath(row: modelChat.arrayList.count - 1, section: 0)
         tableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
     }
-    
+
     // 메시지 전송
     func sendChatMessage(content:String) {
-        // for server
-        let parameters: [String: String] = [
-            "description" : content
-        ]
-
-        // token 값 바꿔야 함
-//        Alamofire.request("http://192.168.1.33/api/message?access_token=\(tokenManger.getMyToken())", method: .post, parameters: parameters, encoding: JSONEncoding.default)
-//            .responseJSON
-//            { response in
-//                switch response.result {
-//                case.success(let value):
-//                    let response = value as! NSDictionary
-//                    //
-//                    //
-//                    print("Success with JSON: \(value)")
-//
-//                case .failure(let error):
-//                    print("message take error : \(error)")
-//                }
-//        }
-        
-        // socket
-        
-////        socket.SS_sendMessage(timeout: 10, message: content)
-////        socket.testServer()
-//
-//        let client = TCPClient(address: "http://192,169.1.33", port: 8080)
-//        switch client.connect(timeout: 4) {
-//        case .success:
-//            print("sdfsfsdf")
-//            switch client.send(string: "GET / HTTP/1.0\n\n" ) {
-//            case .success:
-//                guard let data = client.read(1024*10) else { return }
-//
-//                if let response = String(bytes: data, encoding: .utf8) {
-//                    print(response)
-//                }
-//            case .failure(let error):
-//                print(error)
-//            }
-//        case .failure(let error):
-//            print(error)
-//        }
-        
-        let socket = SocketIOClient(socketURL: URL(string: "http://192.168.1.33:8080")!, config: [.log(true), .compress])
-        
-        socket.on(clientEvent: .connect) {data, ack in
-            print("socket connected")
+        socket.on(clientEvent:.connect) {data, ack in
+            self.socket.emit("message", with:[content])
+            print("print")
         }
-        
         socket.connect()
     }
     
     // 메시지 받아오기
-    func getChatNewMessage() -> String {
-        var resultArray:Array<AnyObject> = []
-        var resultTime = ""
-        var resultMessage = ""
+    func getChatMessage() {
+        let socket = SocketIOClient(
+            socketURL: URL(string: "http://192.168.1.247:8080")!,
+            config: [.log(true), .compress])
         
-        // server
-        Alamofire.request("http://192.168.1.33/api/message/my?access_token=\(tokenManger.getMyToken())", method: .get,  encoding: JSONEncoding.default)
-            .responseJSON
-            { response in
-                switch response.result {
-                case.success:
-                    if let res = response.result.value as? NSDictionary {
-                        if let message = res["message"] as? String {
-                            resultMessage = message
-                            print("message send success : \(resultMessage)")
-                        }
-                        if let time = res["created"] as? String {
-                            resultTime = time
-                            print("message send success : \(resultTime)")
-                        }
-                    }
-                case .failure(let error):
-                    print("message send error : \(error)")
-                }
+        socket.on("message") {data, ack in
+            socket.emit("message", "\(data)")
         }
-        
-//        return resultArray
-        return resultMessage
     }
     
     @IBAction func sendButtonPressed(_ sender: Any) {
@@ -207,7 +142,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let info = modelChat.arrayList[indexPath.row]
         
         // for server
-        let infoo = getChatNewMessage()
+        getChatMessage()
         
         // cell detail setting
         // local 로그인 했을때
